@@ -175,67 +175,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="mt-12 text-center fade-in" data-delay="200" data-testid="contact-info">
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Адрес</h4>
-                <p className="text-gray-600 text-sm" data-testid="text-address">
-                  Краков, ул. Примерная 123, 30-001
-                </p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Телефон</h4>
-                <p className="text-gray-600 text-sm">
-                  <a
-                    href="tel:+48123456789"
-                    className="hover:text-gray-900 transition-colors"
-                    data-testid="link-phone"
-                  >
-                    +48 123 456 789
-                  </a>
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                <p className="text-gray-600 text-sm">
-                  <a
-                    href="mailto:info@magerovska.com"
-                    className="hover:text-gray-900 transition-colors"
-                    data-testid="link-email"
-                  >
-                    info@magerovska.com
-                  </a>
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-4">Социальные сети</h4>
-                <div className="flex justify-center space-x-4">
-                  <a
-                    href="https://instagram.com/magerovska_permanent"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
-                    data-testid="link-instagram-social"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="https://wa.me/48123456789"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900 transition-colors"
-                    data-testid="link-whatsapp"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
