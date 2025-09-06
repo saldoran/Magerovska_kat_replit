@@ -46,77 +46,101 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-16 bg-gray-50" data-testid="pricing-section">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 fade-in" data-testid="pricing-header">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Цены</h2>
+    <section id="pricing" className="py-20 bg-gray-50" data-testid="pricing-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 fade-in" data-testid="pricing-header">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Прайс-лист</h2>
+          <p className="text-gray-600 text-lg">Прозрачные цены без скрытых доплат</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="100" data-testid="pricing-card-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-1">
-              Пудровые брови
-            </h3>
-            <div className="text-2xl font-bold text-gray-900 mb-2">350 zł</div>
-            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-1">
-              -20% на первый визит
-            </div>
-            <ul className="text-sm text-gray-600 mb-6 space-y-1">
-              <li>• Консультация и подбор формы</li>
-              <li>• Пигментация</li>
-              <li>• Коррекция через 4-6 недель</li>
-            </ul>
-            <Button
-              onClick={scrollToContact}
-              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
-              data-testid="button-book-1"
+          {pricingCards.map((card, index) => (
+            <div
+              key={card.id}
+              className="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in"
+              data-delay={100 * (index + 1)}
+              data-testid={`pricing-card-${card.id}`}
             >
-              Записаться
-            </Button>
-          </div>
+              {/* Popular Badge */}
+              {index === 1 && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    Популярно
+                  </span>
+                </div>
+              )}
+              
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4" data-testid={`pricing-title-${card.id}`}>
+                  {card.title}
+                </h3>
+                
+                <div className="mb-4">
+                  <span className="text-3xl font-bold text-gray-900">
+                    {card.services[0]?.price || "350 zł"}
+                  </span>
+                </div>
 
-          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="200" data-testid="pricing-card-2">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-2">
-              Lip Blush
-            </h3>
-            <div className="text-2xl font-bold text-gray-900 mb-2">400 zł</div>
-            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-2">
-              -20% на первый визит
-            </div>
-            <ul className="text-sm text-gray-600 mb-6 space-y-1">
-              <li>• Консультация и подбор оттенка</li>
-              <li>• Пигментация</li>
-              <li>• Коррекция через 4-6 недель</li>
-            </ul>
-            <Button
-              onClick={scrollToContact}
-              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
-              data-testid="button-book-2"
-            >
-              Записаться
-            </Button>
-          </div>
+                <div className="bg-red-50 text-red-700 text-sm font-medium py-2 px-4 rounded-lg mb-6" data-testid={`discount-ribbon-${card.id}`}>
+                  🎉 Скидка 20% на первый визит
+                </div>
 
-          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="300" data-testid="pricing-card-3">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-3">
-              Межресничка
-            </h3>
-            <div className="text-2xl font-bold text-gray-900 mb-2">300 zł</div>
-            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-3">
-              -20% на первый визит
+                <ul className="text-left space-y-3 mb-8">
+                  {card.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm text-gray-600" data-testid={`service-name-${card.id}-${serviceIndex}`}>
+                        {service.name}
+                      </span>
+                    </li>
+                  ))}
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm text-gray-600">
+                      Бесплатная коррекция через 4-6 недель
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm text-gray-600">
+                      Сертифицированные пигменты
+                    </span>
+                  </li>
+                </ul>
+
+                <Button
+                  onClick={scrollToContact}
+                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200"
+                  data-testid={`button-book-${card.id}`}
+                >
+                  Записаться на консультацию
+                </Button>
+              </div>
             </div>
-            <ul className="text-sm text-gray-600 mb-6 space-y-1">
-              <li>• Консультация</li>
-              <li>• Пигментация</li>
-              <li>• Коррекция через 4-6 недель</li>
-            </ul>
-            <Button
-              onClick={scrollToContact}
-              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
-              data-testid="button-book-3"
-            >
-              Записаться
-            </Button>
+          ))}
+        </div>
+
+        <div className="text-center mt-12 fade-in" data-testid="pricing-packages">
+          <div className="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">💎 Комплексные предложения</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+              <div className="bg-gray-50 rounded-lg p-4" data-testid="package-brows-lips">
+                <div className="text-lg font-bold text-gray-900">Брови + Губы</div>
+                <div className="text-sm text-gray-600 line-through">850 zł</div>
+                <div className="text-xl font-bold text-red-600">750 zł</div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4" data-testid="package-all-zones">
+                <div className="text-lg font-bold text-gray-900">Все три зоны</div>
+                <div className="text-sm text-gray-600 line-through">1150 zł</div>
+                <div className="text-xl font-bold text-red-600">950 zł</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
