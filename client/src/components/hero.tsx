@@ -10,23 +10,25 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-white min-h-screen flex items-center" data-testid="hero-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center space-y-8 fade-in" data-delay="200" data-testid="hero-content">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-            Перманентный макияж, который выглядит{" "}
-            <span className="text-primary">естественно</span> — как вы
+    <section className="bg-white py-20" data-testid="hero-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-6 fade-in" data-delay="200" data-testid="hero-content">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            Перманентный макияж, который выглядит естественно — как вы
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto" data-testid="hero-subtitle">
-            Брови, губы, межресничка <span className="text-primary font-medium">+ -20% на первый визит</span>
+          <p className="text-lg text-gray-600" data-testid="hero-subtitle">
+            Брови, губы, межресничка + -20% на первый визит
           </p>
           <Button
             onClick={scrollToContact}
-            className="bg-primary hover:bg-accent text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-200"
+            className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200"
             data-testid="button-book-consultation"
           >
             Записаться
           </Button>
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-sm text-gray-500 font-medium">Magerovska permanent</p>
         </div>
       </div>
     </section>

@@ -38,36 +38,36 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 bg-white" data-testid="faq-section">
+    <section className="py-16 bg-gray-50" data-testid="faq-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="faq-header">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Частые вопросы</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Частые вопросы</h2>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="border rounded-lg overflow-hidden fade-in"
+              className="bg-white border rounded-lg overflow-hidden fade-in"
               data-delay={100 * (index + 1)}
               data-testid={`faq-item-${faq.id}`}
             >
               <Button
                 variant="ghost"
-                className="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none hover:bg-transparent"
+                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50"
                 onClick={() => toggleFaq(faq.id)}
                 data-testid={`faq-trigger-${faq.id}`}
               >
-                <h3 className="font-medium text-lg text-foreground pr-4">{faq.question}</h3>
+                <h3 className="font-medium text-gray-900 pr-4">{faq.question}</h3>
                 <ChevronDown 
-                  className={`text-muted-foreground transition-transform duration-300 flex-shrink-0 ${
+                  className={`text-gray-400 transition-transform duration-300 flex-shrink-0 ${
                     openFaq === faq.id ? 'rotate-180' : ''
                   }`}
                 />
               </Button>
               {openFaq === faq.id && (
-                <div className="px-8 pb-6" data-testid={`faq-content-${faq.id}`}>
-                  <p className="text-muted-foreground leading-relaxed">
+                <div className="px-6 pb-4" data-testid={`faq-content-${faq.id}`}>
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

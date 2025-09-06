@@ -46,50 +46,78 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-white" data-testid="pricing-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="py-16 bg-gray-50" data-testid="pricing-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="pricing-header">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Цены</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Цены</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingCards.map((card, index) => (
-            <div
-              key={card.id}
-              className="border rounded-lg p-6 text-center fade-in"
-              data-delay={100 * (index + 1)}
-              data-testid={`pricing-card-${card.id}`}
-            >
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-4" data-testid={`pricing-title-${card.id}`}>
-                {card.title}
-              </h3>
-              
-              <div className="space-y-2 mb-6">
-                {card.services.map((service, serviceIndex) => (
-                  <div key={serviceIndex} className="text-sm">
-                    <span className="text-muted-foreground" data-testid={`service-name-${card.id}-${serviceIndex}`}>
-                      {service.name}: 
-                    </span>
-                    <span className="font-medium ml-1" data-testid={`service-price-${card.id}-${serviceIndex}`}>
-                      {service.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="text-primary font-bold text-lg mb-6" data-testid={`discount-ribbon-${card.id}`}>
-                -20% на первый визит
-              </div>
-
-              <Button
-                onClick={scrollToContact}
-                className="w-full bg-primary hover:bg-accent text-white py-2 rounded-lg font-medium transition-colors duration-200"
-                data-testid={`button-book-${card.id}`}
-              >
-                Записаться
-              </Button>
+          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="100" data-testid="pricing-card-1">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-1">
+              Пудровые брови
+            </h3>
+            <div className="text-2xl font-bold text-gray-900 mb-2">350 zł</div>
+            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-1">
+              -20% на первый визит
             </div>
-          ))}
+            <ul className="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Консультация и подбор формы</li>
+              <li>• Пигментация</li>
+              <li>• Коррекция через 4-6 недель</li>
+            </ul>
+            <Button
+              onClick={scrollToContact}
+              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
+              data-testid="button-book-1"
+            >
+              Записаться
+            </Button>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="200" data-testid="pricing-card-2">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-2">
+              Lip Blush
+            </h3>
+            <div className="text-2xl font-bold text-gray-900 mb-2">400 zł</div>
+            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-2">
+              -20% на первый визит
+            </div>
+            <ul className="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Консультация и подбор оттенка</li>
+              <li>• Пигментация</li>
+              <li>• Коррекция через 4-6 недель</li>
+            </ul>
+            <Button
+              onClick={scrollToContact}
+              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
+              data-testid="button-book-2"
+            >
+              Записаться
+            </Button>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg text-center fade-in" data-delay="300" data-testid="pricing-card-3">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4" data-testid="pricing-title-3">
+              Межресничка
+            </h3>
+            <div className="text-2xl font-bold text-gray-900 mb-2">300 zł</div>
+            <div className="text-sm text-red-600 font-medium mb-4" data-testid="discount-ribbon-3">
+              -20% на первый визит
+            </div>
+            <ul className="text-sm text-gray-600 mb-6 space-y-1">
+              <li>• Консультация</li>
+              <li>• Пигментация</li>
+              <li>• Коррекция через 4-6 недель</li>
+            </ul>
+            <Button
+              onClick={scrollToContact}
+              className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-md font-medium transition-colors duration-200"
+              data-testid="button-book-3"
+            >
+              Записаться
+            </Button>
+          </div>
         </div>
       </div>
     </section>

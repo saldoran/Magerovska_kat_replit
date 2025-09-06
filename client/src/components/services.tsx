@@ -35,37 +35,69 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white" data-testid="services-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-16 bg-gray-50" data-testid="services-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="services-header">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Услуги</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Услуги</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              className="text-center border rounded-lg p-6 fade-in"
-              data-delay={100 * (index + 1)}
-              data-testid={`service-card-${service.id}`}
-            >
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-4" data-testid={`service-title-${service.id}`}>
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-4">{service.description}</p>
-              
-              <div className="space-y-2 text-sm">
-                <div>
-                  <span className="font-medium">Длительность: </span>
-                  <span data-testid={`service-duration-${service.id}`}>{service.duration}</span>
-                </div>
-                <div>
-                  <span className="font-medium">Заживление: </span>
-                  <span data-testid={`service-healing-${service.id}`}>{service.healing}</span>
-                </div>
+        <div className="space-y-8">
+          <div className="bg-white p-6 rounded-lg fade-in" data-delay="100" data-testid="service-card-1">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2" data-testid="service-title-1">
+              Пудровые/Ombré брови
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Естественный эффект с мягким градиентом цвета, идеально подходит для любого типа кожи.
+            </p>
+            <div className="text-sm text-gray-500">
+              <div className="inline-block mr-6">
+                <span className="font-medium">Длительность: </span>
+                <span data-testid="service-duration-1">2-3 часа</span>
+              </div>
+              <div className="inline-block">
+                <span className="font-medium">Заживление: </span>
+                <span data-testid="service-healing-1">7-10 дней</span>
               </div>
             </div>
-          ))}
+          </div>
+
+          <div className="bg-white p-6 rounded-lg fade-in" data-delay="200" data-testid="service-card-2">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2" data-testid="service-title-2">
+              Lip Blush
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Нежное тонирование губ с эффектом увеличения объема и коррекцией асимметрии.
+            </p>
+            <div className="text-sm text-gray-500">
+              <div className="inline-block mr-6">
+                <span className="font-medium">Длительность: </span>
+                <span data-testid="service-duration-2">2-3 часа</span>
+              </div>
+              <div className="inline-block">
+                <span className="font-medium">Заживление: </span>
+                <span data-testid="service-healing-2">7-14 дней</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg fade-in" data-delay="300" data-testid="service-card-3">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2" data-testid="service-title-3">
+              Межресничка
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Создает эффект густых ресниц и выразительного взгляда без необходимости использования туши.
+            </p>
+            <div className="text-sm text-gray-500">
+              <div className="inline-block mr-6">
+                <span className="font-medium">Длительность: </span>
+                <span data-testid="service-duration-3">1-2 часа</span>
+              </div>
+              <div className="inline-block">
+                <span className="font-medium">Заживление: </span>
+                <span data-testid="service-healing-3">5-7 дней</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

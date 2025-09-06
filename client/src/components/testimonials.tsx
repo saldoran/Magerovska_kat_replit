@@ -29,29 +29,29 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gray-50" data-testid="testimonials-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-white" data-testid="testimonials-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="testimonials-header">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Отзывы</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Отзывы</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="bg-white border rounded-lg p-6 fade-in"
+              className="fade-in"
               data-delay={100 * (index + 1)}
               data-testid={`testimonial-${testimonial.id}`}
             >
-              <div className="mb-4">
-                <div className="font-medium text-foreground" data-testid={`testimonial-name-${testimonial.id}`}>
+              <div className="mb-3">
+                <div className="font-semibold text-gray-900" data-testid={`testimonial-name-${testimonial.id}`}>
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-muted-foreground" data-testid={`testimonial-date-${testimonial.id}`}>
+                <div className="text-sm text-gray-500" data-testid={`testimonial-date-${testimonial.id}`}>
                   {testimonial.date}
                 </div>
               </div>
-              <blockquote className="text-muted-foreground text-sm leading-relaxed" data-testid={`testimonial-text-${testimonial.id}`}>
+              <blockquote className="text-gray-600 text-sm leading-relaxed" data-testid={`testimonial-text-${testimonial.id}`}>
                 "{testimonial.text}"
               </blockquote>
             </div>
