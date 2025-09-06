@@ -117,7 +117,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div 
-          className="mobile-menu active fixed inset-0 z-40 gradient-hero flex flex-col items-center justify-center"
+          className="mobile-menu active fixed inset-0 z-40 bg-black bg-opacity-20 backdrop-blur-md flex flex-col items-center justify-center"
           data-testid="mobile-menu"
         >
           <Button
