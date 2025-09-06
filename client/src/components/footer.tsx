@@ -1,4 +1,6 @@
 export default function Footer() {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Address Section */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-4">Адрес</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{t('footer.address')}</h3>
             <p className="text-gray-300" data-testid="footer-address">
               Краков, ул. Примерная 123, 30-001
             </p>
@@ -20,7 +22,7 @@ export default function Footer() {
 
           {/* Phone Section */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-4">Телефон</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{t('footer.phone')}</h3>
             <a 
               href="tel:+48123456789"
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -32,7 +34,7 @@ export default function Footer() {
 
           {/* Email Section */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-4">Email</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{t('footer.email')}</h3>
             <a 
               href="mailto:info@magerovska.com"
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -44,7 +46,7 @@ export default function Footer() {
 
           {/* Social Media Section */}
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-4">Социальные сети</h3>
+            <h3 className="text-xl font-bold text-white mb-4">{t('footer.social')}</h3>
             <div className="flex justify-center space-x-4">
               {/* Instagram */}
               <a
@@ -81,7 +83,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm" data-testid="footer-copyright">
-            © 2023 Magerovska Permanent. Все права защищены.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

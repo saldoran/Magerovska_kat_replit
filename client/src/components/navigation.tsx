@@ -1,9 +1,18 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const languages = [
+    { code: 'ru' as Language, name: 'RU', flag: '🇷🇺' },
+    { code: 'pl' as Language, name: 'PL', flag: '🇵🇱' },
+    { code: 'en' as Language, name: 'EN', flag: '🇺🇸' },
+  ];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -30,48 +39,77 @@ export default function Navigation() {
                 className="text-white hover:text-accent transition-colors duration-200"
                 data-testid="nav-portfolio"
               >
-                Портфолио
+                {t('nav.portfolio')}
               </button>
               <button
                 onClick={() => scrollToSection('services')}
                 className="text-white hover:text-accent transition-colors duration-200"
                 data-testid="nav-services"
               >
-                Услуги
-              </button>
-              <button
-                onClick={() => scrollToSection('process')}
-                className="text-white hover:text-accent transition-colors duration-200"
-                data-testid="nav-process"
-              >
-                Процесс
+                {t('nav.services')}
               </button>
               <button
                 onClick={() => scrollToSection('pricing')}
                 className="text-white hover:text-accent transition-colors duration-200"
                 data-testid="nav-pricing"
               >
-                Цены
+                {t('nav.pricing')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-white hover:text-accent transition-colors duration-200"
                 data-testid="nav-contact"
               >
-                Контакты
+                {t('nav.contact')}
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden text-white"
-              onClick={() => setIsMobileMenuOpen(true)}
-              data-testid="button-mobile-menu"
-            >
-              <Menu className="h-6 w-6" />
-            </Button>
+            <div className="flex items-center space-x-4">
+              {/* Language Dropdown */}
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-white hover:text-accent border border-white border-opacity-20 hover:border-opacity-40"
+                  onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+                  data-testid="button-language-dropdown"
+                >
+                  {languages.find(lang => lang.code === language)?.flag} {languages.find(lang => lang.code === language)?.name}
+                  <ChevronDown className="ml-1 h-3 w-3" />
+                </Button>
+
+                {isLanguageDropdownOpen && (
+                  <div className="absolute top-full right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50" data-testid="language-dropdown">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.code);
+                          setIsLanguageDropdownOpen(false);
+                        }}
+                        className={`w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors ${
+                          language === lang.code ? 'bg-gray-100 font-medium' : ''
+                        }`}
+                        data-testid={`language-option-${lang.code}`}
+                      >
+                        {lang.flag} {lang.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden text-white"
+                onClick={() => setIsMobileMenuOpen(true)}
+                data-testid="button-mobile-menu"
+              >
+                <Menu className="h-6 w-6" />
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -98,35 +136,28 @@ export default function Navigation() {
               className="block text-white text-2xl font-light hover:text-accent transition-colors"
               data-testid="mobile-nav-portfolio"
             >
-              Портфолио
+              {t('nav.portfolio')}
             </button>
             <button
               onClick={() => scrollToSection('services')}
               className="block text-white text-2xl font-light hover:text-accent transition-colors"
               data-testid="mobile-nav-services"
             >
-              Услуги
-            </button>
-            <button
-              onClick={() => scrollToSection('process')}
-              className="block text-white text-2xl font-light hover:text-accent transition-colors"
-              data-testid="mobile-nav-process"
-            >
-              Процесс
+              {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
               className="block text-white text-2xl font-light hover:text-accent transition-colors"
               data-testid="mobile-nav-pricing"
             >
-              Цены
+              {t('nav.pricing')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="block text-white text-2xl font-light hover:text-accent transition-colors"
               data-testid="mobile-nav-contact"
             >
-              Контакты
+              {t('nav.contact')}
             </button>
           </div>
         </div>
