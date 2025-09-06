@@ -1,36 +1,35 @@
 import { Eye, Heart, Sparkles } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services() {
+  const { t } = useLanguage();
   const services = [
     {
       id: 1,
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Брови",
-      subtitle: "Пудровые и Ombré техники",
+      titleKey: "services.eyebrows.title",
+      descKey: "services.eyebrows.desc",
       duration: "2-3 часа",
       healing: "7-14 дней", 
-      lasting: "1-2 года",
-      description: "Создание идеальной формы бровей с помощью современных техник. Естественный результат без эффекта \"нарисованности\"."
+      lasting: "1-2 года"
     },
     {
       id: 2,
       icon: <Heart className="w-8 h-8" />,
-      title: "Lip Blush",
-      subtitle: "Естественный цвет губ",
+      titleKey: "services.lips.title",
+      descKey: "services.lips.desc",
       duration: "2-2.5 часа",
       healing: "5-7 дней",
-      lasting: "1-1.5 года",
-      description: "Придание губам естественного румянца и выразительности. Подходит для создания эффекта \"губы без макияжа\"."
+      lasting: "1-1.5 года"
     },
     {
       id: 3,
       icon: <Eye className="w-8 h-8" />,
-      title: "Межресничка",
-      subtitle: "Подчеркивание глаз",
+      titleKey: "services.eyeliner.title",
+      descKey: "services.eyeliner.desc",
       duration: "1.5-2 часа",
       healing: "3-5 дней",
-      lasting: "2-3 года",
-      description: "Деликатная прорисовка между ресницами для создания эффекта густых ресниц и выразительного взгляда."
+      lasting: "2-3 года"
     }
   ];
 
@@ -38,8 +37,8 @@ export default function Services() {
     <section id="services" className="py-20 bg-white" data-testid="services-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in" data-testid="services-header">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Наши услуги</h2>
-          <p className="text-gray-600 text-lg">Профессиональный перманентный макияж с гарантией качества</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('services.title')}</h2>
+          <p className="text-gray-600 text-lg">{t('services.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -55,9 +54,9 @@ export default function Services() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2" data-testid={`service-title-${service.id}`}>
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
+                <p className="text-gray-600 text-sm">{t(service.descKey)}</p>
               </div>
               
               <div className="space-y-3 mb-6">
@@ -77,7 +76,6 @@ export default function Services() {
               
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-xs text-gray-500 leading-relaxed" data-testid={`service-description-${service.id}`}>
-                  {service.subtitle}
                 </p>
               </div>
             </div>

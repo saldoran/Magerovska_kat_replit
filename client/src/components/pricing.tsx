@@ -1,7 +1,9 @@
 import { Sparkles, Heart, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Pricing() {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -13,7 +15,7 @@ export default function Pricing() {
     {
       id: 1,
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Брови",
+      titleKey: "pricing.eyebrows",
       services: [
         { name: "Пудровые брови", price: "450 zł" },
         { name: "Ombré брови", price: "500 zł" },
@@ -24,7 +26,7 @@ export default function Pricing() {
     {
       id: 2,
       icon: <Heart className="w-8 h-8" />,
-      title: "Губы",
+      titleKey: "pricing.lips",
       services: [
         { name: "Lip Blush", price: "400 zł" },
         { name: "Контур губ", price: "350 zł" },
@@ -35,7 +37,7 @@ export default function Pricing() {
     {
       id: 3,
       icon: <Eye className="w-8 h-8" />,
-      title: "Глаза",
+      titleKey: "pricing.eyeliner",
       services: [
         { name: "Межресничка верх", price: "300 zł" },
         { name: "Межресничка низ", price: "200 zł" },
@@ -49,8 +51,8 @@ export default function Pricing() {
     <section id="pricing" className="py-20 bg-gray-50" data-testid="pricing-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in" data-testid="pricing-header">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Прайс-лист</h2>
-          <p className="text-gray-600 text-lg">Прозрачные цены без скрытых доплат</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('pricing.title')}</h2>
+          <p className="text-gray-600 text-lg">{t('pricing.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,7 +74,7 @@ export default function Pricing() {
               
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4" data-testid={`pricing-title-${card.id}`}>
-                  {card.title}
+                  {t(card.titleKey)}
                 </h3>
                 
                 <div className="mb-4">

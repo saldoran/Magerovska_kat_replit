@@ -23,8 +23,10 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const { toast } = useToast();
 
   const form = useForm<InsertContactSubmission>({
@@ -43,8 +45,8 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "Заявка отправлена!",
-        description: "Спасибо за вашу заявку! Я свяжусь с вами в ближайшее время.",
+        title: t('contact.success'),
+        description: t('contact.success'),
       });
       form.reset();
     },
@@ -65,14 +67,15 @@ export default function Contact() {
     <section id="contact" className="py-16 bg-gray-50" data-testid="contact-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="contact-header">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Контакты</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('contact.title')}</h2>
+          <p className="text-gray-600">{t('contact.subtitle')}</p>
         </div>
 
         <div className="max-w-md mx-auto">
           {/* Contact Form */}
           <div className="fade-in" data-delay="100" data-testid="contact-form">
             <div className="bg-white border rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6 text-center">Записаться на процедуру</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-6 text-center">{t('contact.title')}</h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -81,7 +84,7 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Ваше имя</FormLabel>
+                        <FormLabel>{t('contact.form.name')}</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Как к вам обращаться?"
@@ -99,7 +102,7 @@ export default function Contact() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Телефон</FormLabel>
+                        <FormLabel>{t('contact.form.phone')}</FormLabel>
                         <FormControl>
                           <Input
                             type="tel"
@@ -118,20 +121,20 @@ export default function Contact() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Выберите услугу</FormLabel>
+                        <FormLabel>{t('contact.form.service')}</FormLabel>
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger data-testid="select-service">
-                              <SelectValue placeholder="Выберите услугу" />
+                              <SelectValue placeholder={t('contact.form.service')} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="brows-powder">Пудровые брови</SelectItem>
-                            <SelectItem value="brows-ombre">Ombré брови</SelectItem>
-                            <SelectItem value="lip-blush">Lip Blush</SelectItem>
-                            <SelectItem value="lip-contour">Контур губ</SelectItem>
-                            <SelectItem value="lash-line-top">Межресничка верх</SelectItem>
-                            <SelectItem value="lash-line-bottom">Межресничка низ</SelectItem>
+                            <SelectItem value="brows-powder">{t('contact.form.service.eyebrows')}</SelectItem>
+                            <SelectItem value="brows-ombre">{t('contact.form.service.eyebrows')}</SelectItem>
+                            <SelectItem value="lip-blush">{t('contact.form.service.lips')}</SelectItem>
+                            <SelectItem value="lip-contour">{t('contact.form.service.lips')}</SelectItem>
+                            <SelectItem value="lash-line-top">{t('contact.form.service.eyeliner')}</SelectItem>
+                            <SelectItem value="lash-line-bottom">{t('contact.form.service.eyeliner')}</SelectItem>
                             <SelectItem value="complex">Комплексная процедура</SelectItem>
                             <SelectItem value="consultation">Консультация</SelectItem>
                           </SelectContent>
@@ -146,7 +149,7 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Сообщение</FormLabel>
+                        <FormLabel>{t('contact.form.message')}</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Расскажите о ваших пожеланиях или задайте вопросы"
@@ -168,7 +171,7 @@ export default function Contact() {
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium transition-colors duration-200"
                     data-testid="button-submit-form"
                   >
-                    {submitContact.isPending ? "Отправляю..." : "Отправить заявку"}
+                    {submitContact.isPending ? "..." : t('contact.form.submit')}
                   </Button>
                 </form>
               </Form>
