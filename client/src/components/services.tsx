@@ -35,50 +35,34 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 gradient-section" data-testid="services-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in" data-testid="services-header">
-          <h2 className="font-serif text-4xl font-bold text-white mb-4">Услуги</h2>
-          <p className="text-white text-opacity-90 text-lg">Профессиональные техники для естественной красоты</p>
+    <section id="services" className="py-20 bg-white" data-testid="services-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 fade-in" data-testid="services-header">
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Услуги</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in"
+              className="text-center border rounded-lg p-6 fade-in"
               data-delay={100 * (index + 1)}
               data-testid={`service-card-${service.id}`}
             >
-              <div className="text-center mb-6">
-                <div className="w-20 h-20 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                  {service.icon}
-                </div>
-                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2" data-testid={`service-title-${service.id}`}>
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground">{service.subtitle}</p>
-              </div>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-4" data-testid={`service-title-${service.id}`}>
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground mb-4">{service.description}</p>
               
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Длительность:</span>
-                  <span className="font-medium" data-testid={`service-duration-${service.id}`}>{service.duration}</span>
+              <div className="space-y-2 text-sm">
+                <div>
+                  <span className="font-medium">Длительность: </span>
+                  <span data-testid={`service-duration-${service.id}`}>{service.duration}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Заживление:</span>
-                  <span className="font-medium" data-testid={`service-healing-${service.id}`}>{service.healing}</span>
+                <div>
+                  <span className="font-medium">Заживление: </span>
+                  <span data-testid={`service-healing-${service.id}`}>{service.healing}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Держится:</span>
-                  <span className="font-medium" data-testid={`service-lasting-${service.id}`}>{service.lasting}</span>
-                </div>
-              </div>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`service-description-${service.id}`}>
-                  {service.description}
-                </p>
               </div>
             </div>
           ))}

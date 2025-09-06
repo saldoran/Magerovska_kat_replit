@@ -30,11 +30,10 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-20 bg-background" data-testid="process-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in" data-testid="process-header">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-4">Процесс работы</h2>
-          <p className="text-muted-foreground text-lg">4 этапа к идеальному результату</p>
+    <section id="process" className="py-20 bg-gray-50" data-testid="process-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 fade-in" data-testid="process-header">
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Процесс</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -45,35 +44,19 @@ export default function Process() {
               data-delay={100 * (index + 1)}
               data-testid={`process-step-${step.id}`}
             >
-              <div className="relative mb-6">
-                <div className="w-24 h-24 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 relative text-primary">
-                  {step.icon}
-                  <span className="absolute -top-2 -right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.id}
-                  </span>
+              <div className="mb-4">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                  {step.id}
                 </div>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-border transform translate-x-0"></div>
-                )}
               </div>
-              <h3 className="font-semibold text-lg text-foreground mb-3" data-testid={`process-title-${step.id}`}>
+              <h3 className="font-semibold text-lg text-foreground mb-2" data-testid={`process-title-${step.id}`}>
                 {step.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed" data-testid={`process-description-${step.id}`}>
+              <p className="text-muted-foreground text-sm" data-testid={`process-description-${step.id}`}>
                 {step.description}
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12 fade-in" data-testid="process-info">
-          <div className="bg-accent bg-opacity-10 rounded-2xl p-6 max-w-2xl mx-auto">
-            <p className="text-muted-foreground">
-              <Info className="inline w-5 h-5 text-accent mr-2" />
-              Весь процесс проходит в стерильных условиях с использованием одноразовых материалов. 
-              Применяется местная анестезия для вашего комфорта.
-            </p>
-          </div>
         </div>
       </div>
     </section>

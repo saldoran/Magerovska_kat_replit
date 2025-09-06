@@ -38,18 +38,17 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 gradient-section" data-testid="faq-section">
+    <section className="py-20 bg-white" data-testid="faq-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in" data-testid="faq-header">
-          <h2 className="font-serif text-4xl font-bold text-white mb-4">Частые вопросы</h2>
-          <p className="text-white text-opacity-90 text-lg">Ответы на самые популярные вопросы о перманентном макияже</p>
+        <div className="text-center mb-12 fade-in" data-testid="faq-header">
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Частые вопросы</h2>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="bg-white bg-opacity-95 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg fade-in"
+              className="border rounded-lg overflow-hidden fade-in"
               data-delay={100 * (index + 1)}
               data-testid={`faq-item-${faq.id}`}
             >

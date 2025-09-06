@@ -39,32 +39,27 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-background" data-testid="portfolio-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in" data-testid="portfolio-header">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-4">Портфолио работ</h2>
-          <p className="text-muted-foreground text-lg">Естественная красота в каждой детали</p>
+    <section id="portfolio" className="py-20 bg-gray-50" data-testid="portfolio-section">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 fade-in" data-testid="portfolio-header">
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Портфолио</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {portfolioItems.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {portfolioItems.slice(0, 3).map((item, index) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 fade-in"
+              className="text-center fade-in"
               data-delay={100 * (index + 1)}
               data-testid={`portfolio-item-${item.id}`}
             >
               <img
                 src={item.image}
                 alt={item.alt}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 object-cover rounded-lg mb-4"
                 data-testid={`img-portfolio-${item.id}`}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {item.title}
-                </span>
-              </div>
+              <h3 className="font-medium text-foreground">{item.title}</h3>
             </div>
           ))}
         </div>

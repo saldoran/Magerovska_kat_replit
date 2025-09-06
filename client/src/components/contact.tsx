@@ -62,18 +62,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background" data-testid="contact-section">
+    <section id="contact" className="py-20 bg-gray-50" data-testid="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in" data-testid="contact-header">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-4">Контакты</h2>
-          <p className="text-muted-foreground text-lg">Свяжитесь со мной для записи на консультацию</p>
+        <div className="text-center mb-12 fade-in" data-testid="contact-header">
+          <h2 className="font-serif text-3xl font-bold text-foreground mb-4">Контакты</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="fade-in" data-delay="100" data-testid="contact-form">
-            <div className="bg-card rounded-2xl p-8 shadow-lg">
-              <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">Записаться на процедуру</h3>
+            <div className="bg-white border rounded-lg p-6">
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Записаться на процедуру</h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -154,6 +153,7 @@ export default function Contact() {
                             className="resize-none"
                             rows={4}
                             {...field}
+                            value={field.value || ""}
                             data-testid="textarea-message"
                           />
                         </FormControl>
@@ -182,7 +182,7 @@ export default function Contact() {
           <div className="fade-in" data-delay="200" data-testid="contact-info">
             <div className="space-y-8">
               {/* Location */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
+              <div className="bg-white border rounded-lg p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="text-primary w-6 h-6" />
@@ -199,7 +199,7 @@ export default function Contact() {
               </div>
 
               {/* Phone */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
+              <div className="bg-white border rounded-lg p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="text-primary w-6 h-6" />
@@ -220,7 +220,7 @@ export default function Contact() {
               </div>
 
               {/* Working Hours */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
+              <div className="bg-white border rounded-lg p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="text-primary w-6 h-6" />
@@ -237,7 +237,7 @@ export default function Contact() {
               </div>
 
               {/* Social Media */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
+              <div className="bg-white border rounded-lg p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Share2 className="text-primary w-6 h-6" />
@@ -273,7 +273,7 @@ export default function Contact() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-card rounded-2xl p-6 shadow-lg">
+              <div className="bg-white border rounded-lg p-6">
                 <h4 className="font-semibold text-foreground text-lg mb-4">Местоположение</h4>
                 <div className="bg-muted rounded-lg h-64 flex items-center justify-center overflow-hidden">
                   <img
