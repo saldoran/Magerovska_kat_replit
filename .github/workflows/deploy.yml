@@ -1,21 +1,12 @@
-name: Deploy to GitHub Pages
+name: Deploy to Hosting
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,23 +24,13 @@ jobs:
       - name: Build project
         run: npx vite build --config vite.config.static.ts
         
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Deploy to hosting via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          enablement: true
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          server: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_LOGIN }}
+          password: ${{ secrets.DEPLOY_PASS }}
+          local-dir: './dist/'
+          server-dir: './public_html/'
+          protocol: sftp
+          port: 22
