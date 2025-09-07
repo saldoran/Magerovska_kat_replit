@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroImage from "@/assets/hero-image.png";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -13,27 +14,39 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 py-32" data-testid="hero-section">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-6 fade-in" data-delay="200" data-testid="hero-content">
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-            {t('hero.title')}
-          </h1>
-          <p className="text-lg text-gray-200" data-testid="hero-subtitle">
-            {t('hero.subtitle')}
+    <section 
+      className="relative h-screen flex items-center justify-center overflow-hidden" 
+      data-testid="hero-section"
+      style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/30"></div>
+      
+      {/* Logo positioned in top right */}
+      <div className="absolute top-8 right-8 md:top-12 md:right-12 z-20">
+        <div className="text-white">
+          <h2 className="text-2xl md:text-3xl font-bold italic tracking-wide">
+            Magerovska
+          </h2>
+          <p className="text-sm md:text-base font-light tracking-wider">
+            permanent
           </p>
-          <Button
-            onClick={scrollToContact}
-            className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-md font-medium text-lg transition-colors duration-200"
-            data-testid="button-book-consultation"
-          >
-            {t('hero.cta')}
-          </Button>
         </div>
-        <div className="mt-16 text-center">
-          <p className="text-sm text-gray-300 font-medium tracking-wide">{t('hero.brand')}</p>
-        </div>
+      </div>
+
+      {/* CTA Button positioned in bottom center */}
+      <div className="absolute bottom-8 md:bottom-16 left-1/2 transform -translate-x-1/2 z-20">
+        <Button
+          onClick={scrollToContact}
+          className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-md font-medium text-lg transition-colors duration-200 shadow-lg"
+          data-testid="button-book-consultation"
+        >
+          {t('hero.cta')}
+        </Button>
       </div>
     </section>
   );
