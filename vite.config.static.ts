@@ -3,7 +3,19 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'copy-404',
+      writeBundle() {
+        // Copy index.html to 404.html for GitHub Pages SPA routing
+        const fs = require('fs');
+        const indexPath = path.resolve(import.meta.dirname, "dist", "index.html");
+        const notFoundPath = path.resolve(import.meta.dirname, "dist", "404.html");
+        fs.copyFileSync(indexPath, notFoundPath);
+      }
+    }
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
