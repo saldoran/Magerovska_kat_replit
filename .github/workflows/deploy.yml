@@ -24,13 +24,33 @@ jobs:
       - name: Build project
         run: npx vite build --config vite.config.static.ts
         
-      - name: Deploy to hosting via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to hosting via SSH
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          server: ${{ secrets.DEPLOY_HOST }}
+          host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_LOGIN }}
           password: ${{ secrets.DEPLOY_PASS }}
-          local-dir: './dist/'
-          server-dir: './public_html/'
-          protocol: sftp
           port: 22
+          script: |
+            # Create backup of current site
+            if [ -d "public_html_backup" ]; then
+              rm -rf public_html_backup
+            fi
+            if [ -d "public_html" ]; then
+              cp -r public_html public_html_backup
+            fi
+            # Create public_html directory if it doesn't exist
+            mkdir -p public_html
+            # Clear current site files
+            rm -rf public_html/*
+            
+      - name: Upload files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_LOGIN }}
+          password: ${{ secrets.DEPLOY_PASS }}
+          port: 22
+          source: './dist/*'
+          target: './public_html/'
+          strip_components: 1
