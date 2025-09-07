@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16" data-testid="footer-section">
+    <footer className="bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 py-16" data-testid="footer-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Address Section */}

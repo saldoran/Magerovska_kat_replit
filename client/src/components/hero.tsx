@@ -13,7 +13,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-32" data-testid="hero-section">
+    <section className="relative bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 py-32" data-testid="hero-section">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-6 fade-in" data-delay="200" data-testid="hero-content">
