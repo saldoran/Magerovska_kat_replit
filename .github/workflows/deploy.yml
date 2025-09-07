@@ -39,10 +39,10 @@ jobs:
             if [ -d "public_html" ]; then
               cp -r public_html public_html_backup
             fi
-            # Create public_html directory if it doesn't exist
-            mkdir -p public_html
+            # Create directory if it doesn't exist
+            mkdir -p magerovska-permanent.com/www
             # Clear current site files
-            rm -rf public_html/*
+            rm -rf magerovska-permanent.com/www/*
             
       - name: Upload files via SCP
         uses: appleboy/scp-action@v0.1.7
@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.DEPLOY_PASS }}
           port: 22
           source: './dist/*'
-          target: './public_html/'
+          target: './magerovska-permanent.com/www/'
           strip_components: 1
