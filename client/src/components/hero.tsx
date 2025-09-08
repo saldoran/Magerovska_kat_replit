@@ -29,20 +29,23 @@ export default function Hero() {
       {/* Logo positioned in top right */}
       <div className="absolute top-8 right-8 md:top-12 md:right-12 z-20">
         <div className="text-white">
-          <h2 className="text-2xl md:text-3xl font-bold italic tracking-wide">
-            Magerovska
+          <h2 className="text-2xl md:text-3xl tracking-wide" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
+            Magerovska permanent
           </h2>
-          <p className="text-sm md:text-base font-light tracking-wider">
-            permanent
-          </p>
         </div>
       </div>
 
-      {/* CTA Button positioned in bottom center */}
-      <div className="absolute bottom-8 md:bottom-16 left-1/2 transform -translate-x-1/2 z-20">
+      {/* Hero Text positioned on the left */}
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20 max-w-lg md:left-12">
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+          {t('hero.title')}
+        </h1>
+        <p className="text-lg text-gray-200 mb-8">
+          {t('hero.subtitle')}
+        </p>
         <Button
           onClick={scrollToContact}
-          className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-md font-medium text-lg transition-colors duration-200 shadow-lg"
+          className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-200 shadow-lg"
           data-testid="button-book-consultation"
         >
           {t('hero.cta')}
