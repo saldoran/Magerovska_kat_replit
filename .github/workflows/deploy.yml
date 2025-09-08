@@ -40,9 +40,9 @@ jobs:
               cp -r public_html public_html_backup
             fi
             # Create directory if it doesn't exist
-            mkdir -p magerovska-permanent.com/www
+            mkdir -p magerovska.com/www
             # Clear current site files
-            rm -rf magerovska-permanent.com/www/*
+            rm -rf magerovska.com/www/*
             
       - name: Upload files via SCP
         uses: appleboy/scp-action@v0.1.7
@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.DEPLOY_PASS }}
           port: 22
           source: './dist/*'
-          target: './magerovska-permanent.com/www/'
+          target: './magerovska.com/www/'
           strip_components: 1
