@@ -21,6 +21,7 @@ const translations = {
     // Hero
     'hero.title': 'Перманентный макияж, который выглядит естественно — как вы',
     'hero.subtitle': 'Брови, губы, межресничка + 20% скидка на первый визит',
+    'hero.slogan': 'Перманентный макияж, который выглядит естественно — как вы. Брови, губы, межресничка в Москве.',
     'hero.cta': 'Записаться на консультацию',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
@@ -78,6 +79,7 @@ const translations = {
     // Hero
     'hero.title': 'Makijaż permanentny, który wygląda naturalnie — jak Ty',
     'hero.subtitle': 'Brwi, usta, kreska + 20% zniżki na pierwszą wizytę',
+    'hero.slogan': 'Makijaż permanentny, który wygląda naturalnie — jak Ty. Brwi, usta, kreska w Warszawie.',
     'hero.cta': 'Umów konsultację',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
@@ -135,6 +137,7 @@ const translations = {
     // Hero
     'hero.title': 'Permanent makeup that looks natural — like you',
     'hero.subtitle': 'Eyebrows, lips, eyeliner + 20% off first visit',
+    'hero.slogan': 'Permanent makeup that looks natural — like you. Eyebrows, lips, eyeliner in Warsaw.',
     'hero.cta': 'Book consultation',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
