@@ -28,6 +28,8 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   phone: true,
   service: true,
   message: true,
+}).extend({
+  phone: z.string().min(1, "Phone number is required").regex(/^[\+]?[\d\s\(\)\-]{7,20}$/, "Please enter a valid phone number"),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
