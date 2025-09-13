@@ -273,6 +273,18 @@ const translations = {
   'services.eyeliner.duration': '1.5-2 godz.',
   'services.eyeliner.healing': '3-5 dni',
   'services.eyeliner.lasting': '2-3 lata',
+  // FAQ
+  'faq.title': 'Najczęściej zadawane pytania',
+  'faq.item.1.question': 'Czy makijaż permanentny boli?',
+  'faq.item.1.answer': 'Zabieg wykonywany jest w znieczuleniu miejscowym, więc dyskomfort jest minimalny. Większość klientek opisuje odczucia jako lekkie kłucie. Dla szczególnie wrażliwych stref stosujemy dodatkowe środki przeciwbólowe.',
+  'faq.item.2.question': 'Jak długo utrzymuje się efekt?',
+  'faq.item.2.answer': 'Trwałość zależy od strefy: brwi utrzymują się 1-2 lata, usta 1-1.5 roku, kreska 2-3 lata. Z czasem pigment stopniowo blaknie, co pozwala korygować kształt i kolor zgodnie ze zmianami stylu.',
+  'faq.item.3.question': 'Jaka pielęgnacja jest potrzebna po zabiegu?',
+  'faq.item.3.answer': 'W pierwszych dniach ważne jest unikanie kontaktu z wodą, nie dotykanie strupków, nie opalanie. Należy aplikować specjalne środki, które otrzymasz. Pełne zagojenie następuje w ciągu 7-14 dni. Szczegółowe instrukcje wydawane są po zabiegu.',
+  'faq.item.4.question': 'Czy są przeciwwskazania?',
+  'faq.item.4.answer': 'Tak, istnieją ograniczenia: ciąża i laktacja, choroby nowotworowe, cukrzyca typu 1, zaburzenia krzepnięcia krwi, skłonność do bliznowców, ostre procesy zapalne. Na konsultacji omawiamy wszystkie niuanse i przeciwwskazania.',
+  'faq.item.5.question': 'Czy potrzebna jest korekta?',
+  'faq.item.5.answer': 'Korekta zalecana jest po 4-6 tygodniach od pierwszego zabiegu dla osiągnięcia idealnego rezultatu. To normalna praktyka, ponieważ skóra goi się u każdego inaczej. W większości przypadków jedna korekta wystarcza na cały okres noszenia.',
   },
   en: {
     // Navigation
@@ -408,6 +420,18 @@ const translations = {
   'services.eyeliner.duration': '1.5-2 hours',
   'services.eyeliner.healing': '3-5 days',
   'services.eyeliner.lasting': '2-3 years',
+  // FAQ
+  'faq.title': 'Frequently Asked Questions',
+  'faq.item.1.question': 'Does permanent makeup hurt?',
+  'faq.item.1.answer': 'The procedure is performed under local anesthesia, so discomfort is minimal. Most clients describe sensations as light tingling. For particularly sensitive areas, we use additional pain relief.',
+  'faq.item.2.question': 'How long does the result last?',
+  'faq.item.2.answer': 'Duration depends on the area: eyebrows last 1-2 years, lips 1-1.5 years, eyeliner 2-3 years. Over time, the pigment gradually fades, allowing you to adjust shape and color according to changes in your style.',
+  'faq.item.3.question': 'What aftercare is needed?',
+  'faq.item.3.answer': 'In the first days, it\'s important to avoid water contact, not touch scabs, avoid sun exposure. Apply special products I will provide. Complete healing takes 7-14 days. Detailed instructions are given after the procedure.',
+  'faq.item.4.question': 'Are there any contraindications?',
+  'faq.item.4.answer': 'Yes, there are restrictions: pregnancy and lactation, cancer, type 1 diabetes, blood clotting disorders, keloid scars, acute inflammatory processes. During consultation, we discuss all nuances and contraindications.',
+  'faq.item.5.question': 'Is a touch-up needed?',
+  'faq.item.5.answer': 'A touch-up is recommended 4-6 weeks after the first procedure to achieve the perfect result. This is normal practice since everyone\'s skin heals differently. In most cases, one touch-up is sufficient for the entire wearing period.',
   },
 };
 
