@@ -15,11 +15,11 @@ export default function Footer() {
   return (
     <footer data-testid="footer-section">
       {/* Social Network Part - Email and Icons */}
-      <div style={{ backgroundColor: '#2d2d2d' }} className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div style={{ backgroundColor: '#2d2d2d' }} className="py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Email Section */}
-          <div className="text-center mb-12">
-            <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
+          <div className="text-center mb-8">
+            <h3 className="text-white text-2xl font-semibold mb-3" data-testid="footer-email-title">
               Email
             </h3>
             <p className="text-gray-300 text-lg" data-testid="footer-email-address">
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Social Media Icons */}
           <div className="text-center">
-            <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-social-title">
+            <h3 className="text-white text-2xl font-semibold mb-3" data-testid="footer-social-title">
               {t('footer.social')}
             </h3>
             <div className="flex justify-center gap-4">

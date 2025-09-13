@@ -171,7 +171,10 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={submitContact.isPending}
-                    className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium transition-colors duration-200"
+                    className="w-full text-white py-3 px-6 rounded-md font-medium transition-colors duration-200"
+                    style={{ backgroundColor: '#3a3a3a' }}
+                    onMouseEnter={(e) => !submitContact.isPending && (e.currentTarget.style.backgroundColor = '#4a4a4a')}
+                    onMouseLeave={(e) => !submitContact.isPending && (e.currentTarget.style.backgroundColor = '#3a3a3a')}
                     data-testid="button-submit-form"
                   >
                     {submitContact.isPending ? "..." : t('contact.form.submit')}

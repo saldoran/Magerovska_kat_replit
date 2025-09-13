@@ -37,7 +37,10 @@ export default function Hero() {
         </p>
         <Button
           onClick={scrollToContact}
-          className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-200 shadow-lg"
+          className="text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-200 shadow-lg"
+          style={{ backgroundColor: '#3a3a3a' }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
           data-testid="button-book-consultation"
         >
           {t('hero.cta')}
