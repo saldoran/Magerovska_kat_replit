@@ -49,14 +49,14 @@ export default function Contact() {
     onSuccess: () => {
       toast({
         title: t('contact.success'),
-        description: "Demo: Form submission successful! (Static deployment mode)",
+        description: t('contact.toast.successDescription'),
       });
       form.reset();
     },
     onError: (error) => {
       toast({
-        title: "Ошибка",
-        description: "Не удалось отправить заявку. Попробуйте еще раз.",
+        title: t('contact.toast.errorTitle'),
+        description: t('contact.toast.errorDescription'),
         variant: "destructive",
       });
     },
@@ -90,7 +90,7 @@ export default function Contact() {
                         <FormLabel>{t('contact.form.name')}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Как к вам обращаться?"
+                            placeholder={t('contact.form.placeholder.name')}
                             {...field}
                             data-testid="input-name"
                           />
@@ -109,7 +109,7 @@ export default function Contact() {
                         <FormControl>
                           <Input
                             type="tel"
-                            placeholder="+48 xxx xxx xxx"
+                            placeholder={t('contact.form.placeholder.phone')}
                             {...field}
                             data-testid="input-phone"
                           />
@@ -138,8 +138,8 @@ export default function Contact() {
                             <SelectItem value="lip-contour">{t('contact.form.service.lips')}</SelectItem>
                             <SelectItem value="lash-line-top">{t('contact.form.service.eyeliner')}</SelectItem>
                             <SelectItem value="lash-line-bottom">{t('contact.form.service.eyeliner')}</SelectItem>
-                            <SelectItem value="complex">Комплексная процедура</SelectItem>
-                            <SelectItem value="consultation">Консультация</SelectItem>
+                            <SelectItem value="complex">{t('contact.form.service.complex')}</SelectItem>
+                            <SelectItem value="consultation">{t('contact.form.service.consultation')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -155,7 +155,7 @@ export default function Contact() {
                         <FormLabel>{t('contact.form.message')}</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Расскажите о ваших пожеланиях или задайте вопросы"
+                            placeholder={t('contact.form.placeholder.message')}
                             className="resize-none"
                             rows={4}
                             {...field}

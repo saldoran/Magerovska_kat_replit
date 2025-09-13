@@ -9,27 +9,27 @@ export default function Services() {
       icon: <Sparkles className="w-8 h-8" />,
       titleKey: "services.eyebrows.title",
       descKey: "services.eyebrows.desc",
-      duration: "2-3 часа",
-      healing: "7-14 дней", 
-      lasting: "1-2 года"
+  duration: t('services.eyebrows.duration'),
+  healing: t('services.eyebrows.healing'),
+  lasting: t('services.eyebrows.lasting')
     },
     {
       id: 2,
       icon: <Heart className="w-8 h-8" />,
       titleKey: "services.lips.title",
       descKey: "services.lips.desc",
-      duration: "2-2.5 часа",
-      healing: "5-7 дней",
-      lasting: "1-1.5 года"
+  duration: t('services.lips.duration'),
+  healing: t('services.lips.healing'),
+  lasting: t('services.lips.lasting')
     },
     {
       id: 3,
       icon: <Eye className="w-8 h-8" />,
       titleKey: "services.eyeliner.title",
       descKey: "services.eyeliner.desc",
-      duration: "1.5-2 часа",
-      healing: "3-5 дней",
-      lasting: "2-3 года"
+  duration: t('services.eyeliner.duration'),
+  healing: t('services.eyeliner.healing'),
+  lasting: t('services.eyeliner.lasting')
     }
   ];
 
@@ -61,15 +61,15 @@ export default function Services() {
               
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Длительность:</span>
+                  <span className="text-gray-500">{t('services.label.duration')}</span>
                   <span className="font-medium" data-testid={`service-duration-${service.id}`}>{service.duration}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Заживление:</span>
+                  <span className="text-gray-500">{t('services.label.healing')}</span>
                   <span className="font-medium" data-testid={`service-healing-${service.id}`}>{service.healing}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Держится:</span>
+                  <span className="text-gray-500">{t('services.label.lasting')}</span>
                   <span className="font-medium" data-testid={`service-lasting-${service.id}`}>{service.lasting}</span>
                 </div>
               </div>

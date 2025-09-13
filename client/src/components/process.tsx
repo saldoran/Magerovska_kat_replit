@@ -1,39 +1,41 @@
 import { MessageCircle, Ruler, Sparkles, Heart } from "lucide-react";
-import { Info } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Process() {
+  const { t } = useLanguage();
+
   const steps = [
     {
       id: 1,
       icon: <MessageCircle className="w-8 h-8" />,
-      title: "Консультация",
-      description: "Обсуждаем ваши пожелания, анализируем форму лица, выбираем подходящую технику и цвет"
+      title: t('process.step1.title'),
+      description: t('process.step1.description'),
     },
     {
       id: 2,
       icon: <Ruler className="w-8 h-8" />,
-      title: "Эскиз",
-      description: "Создаем идеальную форму с помощью замеров по золотому сечению и вашим индивидуальным особенностям"
+      title: t('process.step2.title'),
+      description: t('process.step2.description'),
     },
     {
       id: 3,
       icon: <Sparkles className="w-8 h-8" />,
-      title: "Пигментация",
-      description: "Процедура выполняется с использованием качественных пигментов и современного оборудования"
+      title: t('process.step3.title'),
+      description: t('process.step3.description'),
     },
     {
       id: 4,
       icon: <Heart className="w-8 h-8" />,
-      title: "Уход",
-      description: "Подробные рекомендации по уходу и бесплатная коррекция через 4-6 недель при необходимости"
-    }
+      title: t('process.step4.title'),
+      description: t('process.step4.description'),
+    },
   ];
 
   return (
     <section id="process" className="py-16 bg-white" data-testid="process-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="process-header">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Процесс</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('process.title')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

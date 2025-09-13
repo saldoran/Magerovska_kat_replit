@@ -13,38 +13,38 @@ export default function Portfolio() {
     {
       id: 1,
       image: portfolioImage1,
-      title: "Пудровые брови",
-      alt: "Пудровые брови - работа мастера Екатерины Магеровской"
+      titleKey: 'portfolio.item.1.title',
+      altKey: 'portfolio.item.1.alt',
     },
     {
       id: 2,
       image: portfolioImage2,
-      title: "Lip Blush",
-      alt: "Lip Blush - перманентный макияж губ"
+      titleKey: 'portfolio.item.2.title',
+      altKey: 'portfolio.item.2.alt',
     },
     {
       id: 3,
       image: portfolioImage3,
-      title: "Брови Ombre",
-      alt: "Техника Ombre для бровей"
+      titleKey: 'portfolio.item.3.title',
+      altKey: 'portfolio.item.3.alt',
     },
     {
       id: 4,
       image: portfolioImage4,
-      title: "Межресничка",
-      alt: "Межресничный татуаж"
+      titleKey: 'portfolio.item.4.title',
+      altKey: 'portfolio.item.4.alt',
     },
     {
       id: 5,
       image: portfolioImage5,
-      title: "Коррекция бровей",
-      alt: "Коррекция формы и цвета бровей"
+      titleKey: 'portfolio.item.5.title',
+      altKey: 'portfolio.item.5.alt',
     },
     {
       id: 6,
       image: portfolioImage6,
-      title: "Результаты работы",
-      alt: "Результаты работы мастера"
+      titleKey: 'portfolio.item.6.title',
+      altKey: 'portfolio.item.6.alt',
     }
   ];
 
@@ -66,13 +66,13 @@ export default function Portfolio() {
             >
               <img
                 src={item.image}
-                alt={item.alt}
+                alt={t(item.altKey as string)}
                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 data-testid={`img-portfolio-${item.id}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-white text-lg font-semibold">{item.title}</h3>
+                <h3 className="text-white text-lg font-semibold">{t(item.titleKey as string)}</h3>
               </div>
             </div>
           ))}
