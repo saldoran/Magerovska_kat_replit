@@ -36,28 +36,28 @@ export default function Navigation() {
             <div className="hidden md:flex space-x-8">
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="text-white hover:text-accent transition-colors duration-200"
+                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-portfolio"
               >
                 {t('nav.portfolio')}
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-white hover:text-accent transition-colors duration-200"
+                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-services"
               >
                 {t('nav.services')}
               </button>
               <button
                 onClick={() => scrollToSection('pricing')}
-                className="text-white hover:text-accent transition-colors duration-200"
+                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-pricing"
               >
                 {t('nav.pricing')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-white hover:text-accent transition-colors duration-200"
+                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-contact"
               >
                 {t('nav.contact')}
@@ -70,7 +70,7 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-white hover:text-accent border border-white border-opacity-20 hover:border-opacity-40"
+                  className="text-white hover:text-white border border-white border-opacity-20 hover:border-opacity-40"
                   onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                   data-testid="button-language-dropdown"
                 >
@@ -133,28 +133,28 @@ export default function Navigation() {
           <div className="space-y-8 text-center">
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="block text-white text-2xl font-light hover:text-accent transition-colors"
+              className="block text-white text-2xl font-light hover:text-white transition-colors"
               data-testid="mobile-nav-portfolio"
             >
               {t('nav.portfolio')}
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="block text-white text-2xl font-light hover:text-accent transition-colors"
+              className="block text-white text-2xl font-light hover:text-white transition-colors"
               data-testid="mobile-nav-services"
             >
               {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
-              className="block text-white text-2xl font-light hover:text-accent transition-colors"
+              className="block text-white text-2xl font-light hover:text-white transition-colors"
               data-testid="mobile-nav-pricing"
             >
               {t('nav.pricing')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block text-white text-2xl font-light hover:text-accent transition-colors"
+              className="block text-white text-2xl font-light hover:text-white transition-colors"
               data-testid="mobile-nav-contact"
             >
               {t('nav.contact')}
