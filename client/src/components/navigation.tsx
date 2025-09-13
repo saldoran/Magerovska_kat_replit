@@ -70,7 +70,7 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-white hover:text-white border border-white border-opacity-20 hover:border-opacity-40"
+                  className="text-white hover:text-white bg-transparent hover:bg-transparent border border-white border-opacity-20 hover:border-opacity-40"
                   onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                   data-testid="button-language-dropdown"
                 >
