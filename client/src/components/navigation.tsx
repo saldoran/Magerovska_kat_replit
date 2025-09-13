@@ -117,11 +117,11 @@ export default function Navigation() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-white"
-                onClick={() => setIsMobileMenuOpen(true)}
+                className="md:hidden text-white bg-transparent hover:bg-transparent"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
-                <Menu className="h-6 w-6" />
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
           </div>
@@ -134,15 +134,6 @@ export default function Navigation() {
           className="mobile-menu active fixed inset-0 z-40 bg-black bg-opacity-20 backdrop-blur-md flex flex-col items-center justify-center"
           data-testid="mobile-menu"
         >
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-6 right-6 text-white"
-            onClick={() => setIsMobileMenuOpen(false)}
-            data-testid="button-close-menu"
-          >
-            <X className="h-6 w-6" />
-          </Button>
           
           <div className="space-y-8 text-center">
             <button
