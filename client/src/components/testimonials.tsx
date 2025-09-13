@@ -5,9 +5,9 @@ export default function Testimonials() {
   const { t } = useLanguage();
 
   const testimonials = [
-    { id: 1, nameKey: 'testimonials.item.1.name', date: '15 декабря 2023', textKey: 'testimonials.item.1.text' },
-    { id: 2, nameKey: 'testimonials.item.2.name', date: '8 декабря 2023', textKey: 'testimonials.item.2.text' },
-    { id: 3, nameKey: 'testimonials.item.3.name', date: '2 декабря 2023', textKey: 'testimonials.item.3.text' },
+    { id: 1, nameKey: 'testimonials.item.1.name', dateKey: 'testimonials.item.1.date', textKey: 'testimonials.item.1.text' },
+    { id: 2, nameKey: 'testimonials.item.2.name', dateKey: 'testimonials.item.2.date', textKey: 'testimonials.item.2.text' },
+    { id: 3, nameKey: 'testimonials.item.3.name', dateKey: 'testimonials.item.3.date', textKey: 'testimonials.item.3.text' },
   ];
 
   const renderStars = () => {
@@ -36,7 +36,7 @@ export default function Testimonials() {
                   {t(testimonial.nameKey)}
                 </div>
                 <div className="text-sm text-gray-500" data-testid={`testimonial-date-${testimonial.id}`}>
-                  {testimonial.date}
+                  {t(testimonial.dateKey)}
                 </div>
               </div>
               <blockquote className="text-gray-600 text-sm leading-relaxed" data-testid={`testimonial-text-${testimonial.id}`}>
