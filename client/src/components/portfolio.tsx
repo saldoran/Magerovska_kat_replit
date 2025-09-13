@@ -83,7 +83,10 @@ export default function Portfolio() {
             href="https://instagram.com/magerovska_permanent"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+            className="inline-flex items-center text-white px-6 py-3 rounded-lg transition-colors duration-200"
+            style={{ backgroundColor: '#3a3a3a' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
             data-testid="link-instagram"
           >
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
