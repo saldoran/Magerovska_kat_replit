@@ -5,17 +5,39 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form submission endpoint
+  // Contact form submission endpoint - submits to Google Form
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
-      const submission = await storage.createContactSubmission(validatedData);
       
-      res.status(201).json({
-        success: true,
-        message: "Contact submission created successfully",
-        data: submission
+      // Prepare Google Form submission data
+      const formData = new URLSearchParams();
+      formData.append('entry.137169618', validatedData.name);
+      formData.append('entry.1522313548', validatedData.phone);  
+      formData.append('entry.1229865591', validatedData.service);
+      formData.append('entry.608867818', validatedData.message || '');
+      
+      // Submit to Google Form
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSewBcoX36YCswtZbrqpshUPNzvXYPrWIbZT_wUJwcXf3mzcvA/formResponse';
+      
+      const response = await fetch(googleFormUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
       });
+      
+      // Google Forms typically responds with a redirect, so we check for success
+      if (response.status === 200 || response.status === 302) {
+        res.status(201).json({
+          success: true,
+          message: "Contact submission sent successfully"
+        });
+      } else {
+        throw new Error(`Google Form submission failed with status: ${response.status}`);
+      }
+      
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({
@@ -24,10 +46,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
           errors: error.errors
         });
       } else {
-        console.error("Error creating contact submission:", error);
+        console.error("Error submitting to Google Form:", error);
         res.status(500).json({
           success: false,
-          message: "Internal server error"
+          message: "Failed to submit form. Please try again."
         });
       }
     }

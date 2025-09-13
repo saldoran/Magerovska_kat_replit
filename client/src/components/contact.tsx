@@ -41,10 +41,8 @@ export default function Contact() {
 
   const submitContact = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
-      // For static deployment, simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Contact form submitted:', data);
-      return { success: true };
+      const response = await apiRequest('POST', '/api/contact', data);
+      return await response.json();
     },
     onSuccess: () => {
       toast({
