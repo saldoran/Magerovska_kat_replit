@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ backgroundColor: '#2d2d2d' }} className="py-16" data-testid="footer-section">
+    <footer style={{ backgroundColor: '#222222' }} className="py-16" data-testid="footer-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Brand Name with Cursive Font */}
         <div className="mb-12">
@@ -32,8 +32,8 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Social Media Section with Background */}
-        <div className="py-8 mb-12" style={{ backgroundColor: '#2d2d2d' }}>
+        {/* Social Media Section with Distinct Background */}
+        <div className="mx-auto max-w-md py-8 px-8 mb-12 rounded-lg" style={{ backgroundColor: '#2d2d2d' }}>
           <div className="text-center">
             <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-social-title">
               {t('footer.social')}
