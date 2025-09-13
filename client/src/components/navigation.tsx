@@ -87,7 +87,7 @@ export default function Navigation() {
                           setLanguage(lang.code);
                           setIsLanguageDropdownOpen(false);
                         }}
-                        className={`w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors ${
+                        className={`w-full px-4 py-2 text-left border-t-2 border-transparent hover:border-gray-900 hover:bg-gray-50 transition-colors ${
                           language === lang.code ? 'bg-gray-100 font-medium' : ''
                         }`}
                         data-testid={`language-option-${lang.code}`}

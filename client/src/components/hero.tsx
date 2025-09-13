@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-image.png";
+import heroImage from "@/assets/hero-image-hq.png";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -26,14 +26,6 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-black/30"></div>
       
-      {/* Logo positioned in top right */}
-      <div className="absolute top-8 right-8 md:top-12 md:right-12 z-20">
-        <div className="text-white">
-          <h2 className="text-2xl md:text-3xl tracking-wide" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
-            Magerovska permanent
-          </h2>
-        </div>
-      </div>
 
       {/* Hero Text positioned on the left */}
       <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20 max-w-lg md:left-12">
