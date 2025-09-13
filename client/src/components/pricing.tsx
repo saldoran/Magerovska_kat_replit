@@ -118,7 +118,10 @@ export default function Pricing() {
 
                 <Button
                   onClick={scrollToContact}
-                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200"
+                  className="w-full text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200"
+                  style={{ backgroundColor: '#3a3a3a' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
                   data-testid={`button-book-${card.id}`}
                 >
                   {t('pricing.bookButton')}

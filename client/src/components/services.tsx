@@ -50,7 +50,10 @@ export default function Services() {
               data-testid={`service-card-${service.id}`}
             >
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <div 
+                  className="w-16 h-16 text-white rounded-full flex items-center justify-center mx-auto mb-4 transition-colors" 
+                  style={{ backgroundColor: '#3a3a3a' }}
+                >
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2" data-testid={`service-title-${service.id}`}>
