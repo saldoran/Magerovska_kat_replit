@@ -13,27 +13,21 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ backgroundColor: '#222222' }} className="py-16" data-testid="footer-section">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Brand Name with Cursive Font */}
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
-            Magerovska permanent
-          </h2>
-        </div>
+    <footer data-testid="footer-section">
+      {/* Social Network Part - Email and Icons */}
+      <div style={{ backgroundColor: '#2d2d2d' }} className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Email Section */}
+          <div className="text-center mb-12">
+            <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
+              Email
+            </h3>
+            <p className="text-gray-300 text-lg" data-testid="footer-email-address">
+              info@magerovska.com
+            </p>
+          </div>
 
-        {/* Email Section */}
-        <div className="text-center mb-12">
-          <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
-            Email
-          </h3>
-          <p className="text-gray-300 text-lg" data-testid="footer-email-address">
-            info@magerovska.com
-          </p>
-        </div>
-
-        {/* Social Media Section with Distinct Background */}
-        <div className="mx-auto max-w-md py-8 px-8 mb-12 rounded-lg" style={{ backgroundColor: '#2d2d2d' }}>
+          {/* Social Media Icons */}
           <div className="text-center">
             <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-social-title">
               {t('footer.social')}
@@ -78,19 +72,27 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Slogan - moved below social networks */}
-        <div className="mb-12">
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('hero.slogan')}
-          </p>
-        </div>
+      {/* Slogan Part - Brand Name and Description */}
+      <div style={{ backgroundColor: '#222222' }} className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Brand Name with Cursive Font */}
+          <div className="mb-8">
+            <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
+              Magerovska permanent
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              {t('hero.slogan')}
+            </p>
+          </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-600 pt-8">
-          <p className="text-gray-500 text-sm" data-testid="footer-copyright">
-            {t('footer.copyright')}
-          </p>
+          {/* Copyright */}
+          <div className="border-t border-gray-600 pt-8">
+            <p className="text-gray-500 text-sm" data-testid="footer-copyright">
+              {t('footer.copyright')}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
