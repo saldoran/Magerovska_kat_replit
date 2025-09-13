@@ -117,7 +117,7 @@ export default function Navigation() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-white bg-transparent hover:bg-transparent"
+                className="md:hidden text-white bg-transparent hover:bg-transparent border border-white border-opacity-20 hover:border-opacity-40"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
@@ -131,7 +131,7 @@ export default function Navigation() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div 
-          className="mobile-menu active fixed inset-0 z-40 bg-black bg-opacity-20 backdrop-blur-md flex flex-col items-center justify-center"
+          className="mobile-menu active fixed inset-0 z-40 bg-black bg-opacity-20 backdrop-blur-md flex flex-col items-center justify-center animate-in fade-in duration-300"
           data-testid="mobile-menu"
         >
           
