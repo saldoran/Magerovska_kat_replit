@@ -34,7 +34,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white" data-testid="services-section">
+    <section id="services" className="py-12 bg-white" data-testid="services-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in" data-testid="services-header">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('services.title')}</h2>

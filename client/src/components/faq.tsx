@@ -20,7 +20,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-gray-50" data-testid="faq-section">
+    <section className="py-12 bg-gray-50" data-testid="faq-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="faq-header">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('faq.title')}</h2>

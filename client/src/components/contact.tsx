@@ -67,7 +67,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-50" data-testid="contact-section">
+    <section id="contact" className="py-12 bg-gray-50" data-testid="contact-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="contact-header">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('contact.title')}</h2>

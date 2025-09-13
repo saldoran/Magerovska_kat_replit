@@ -17,7 +17,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 bg-white" data-testid="testimonials-section">
+    <section className="py-12 bg-white" data-testid="testimonials-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 fade-in" data-testid="testimonials-header">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('testimonials.title')}</h2>

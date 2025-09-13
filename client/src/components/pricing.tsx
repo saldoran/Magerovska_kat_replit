@@ -48,7 +48,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-gray-50" data-testid="pricing-section">
+    <section id="pricing" className="py-12 bg-gray-50" data-testid="pricing-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in" data-testid="pricing-header">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('pricing.title')}</h2>
