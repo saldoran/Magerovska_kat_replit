@@ -27,8 +27,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30"></div>
       
 
-      {/* Hero Text positioned at the bottom */}
-      <div className="absolute bottom-16 left-8 right-8 z-20 max-w-lg md:left-12 md:right-auto md:bottom-20">
+      {/* Hero Text positioned at the bottom center */}
+      <div className="absolute bottom-8 left-8 right-8 z-20 text-center md:bottom-12 md:left-1/2 md:transform md:-translate-x-1/2 md:max-w-2xl">
         <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
           {t('hero.title')}
         </h1>
