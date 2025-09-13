@@ -13,22 +13,19 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{ backgroundColor: '#222222' }} className="py-16" data-testid="footer-section">
+    <footer style={{ backgroundColor: '#2d2d2d' }} className="py-16" data-testid="footer-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Brand Name with Cursive Font */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl text-white mb-4" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
+          <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
             Magerovska permanent
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('hero.slogan')}
-          </p>
         </div>
 
-        {/* Contact Information */}
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
+        {/* Contact Information - Centered */}
+        <div className="mb-12 space-y-8">
           {/* Email Section */}
-          <div className="text-left">
+          <div className="text-center">
             <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
               Email
             </h3>
@@ -38,16 +35,19 @@ export default function Footer() {
           </div>
 
           {/* Social Media Section */}
-          <div className="text-left">
+          <div className="text-center">
             <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-social-title">
               {t('footer.social')}
             </h3>
-            <div className="flex gap-4">
+            <div className="flex justify-center gap-4">
               <a 
                 href="https://wa.me/48123456789" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-600 hover:bg-gray-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3a3a3a' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
                 data-testid="social-whatsapp"
               >
                 <MessageCircle className="w-6 h-6 text-white" />
@@ -56,7 +56,10 @@ export default function Footer() {
                 href="https://instagram.com/magerovska_permanent" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-600 hover:bg-gray-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3a3a3a' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
                 data-testid="social-instagram"
               >
                 <Instagram className="w-6 h-6 text-white" />
@@ -65,13 +68,23 @@ export default function Footer() {
                 href="https://t.me/magerovska_permanent" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gray-600 hover:bg-gray-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3a3a3a' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
                 data-testid="social-telegram"
               >
                 <FaTelegram className="w-6 h-6 text-white" />
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Slogan - moved below contact info */}
+        <div className="mb-12">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            {t('hero.slogan')}
+          </p>
         </div>
 
         {/* Copyright */}
