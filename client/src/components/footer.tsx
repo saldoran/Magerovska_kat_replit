@@ -15,29 +15,25 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#2d2d2d' }} className="py-16" data-testid="footer-section">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Brand Name with Cursive Font and Slogan */}
+        {/* Brand Name with Cursive Font */}
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
             Magerovska permanent
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('hero.slogan')}
+        </div>
+
+        {/* Email Section */}
+        <div className="text-center mb-12">
+          <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
+            Email
+          </h3>
+          <p className="text-gray-300 text-lg" data-testid="footer-email-address">
+            info@magerovska.com
           </p>
         </div>
 
-        {/* Contact Information - Centered */}
-        <div className="mb-12 space-y-8">
-          {/* Email Section */}
-          <div className="text-center">
-            <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-email-title">
-              Email
-            </h3>
-            <p className="text-gray-300 text-lg" data-testid="footer-email-address">
-              info@magerovska.com
-            </p>
-          </div>
-
-          {/* Social Media Section */}
+        {/* Social Media Section with Background */}
+        <div className="py-8 mb-12" style={{ backgroundColor: '#2d2d2d' }}>
           <div className="text-center">
             <h3 className="text-white text-2xl font-semibold mb-4" data-testid="footer-social-title">
               {t('footer.social')}
@@ -81,6 +77,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Slogan - moved below social networks */}
+        <div className="mb-12">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            {t('hero.slogan')}
+          </p>
         </div>
 
         {/* Copyright */}
