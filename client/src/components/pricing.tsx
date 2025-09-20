@@ -51,8 +51,7 @@ export default function Pricing() {
       titleKey: "pricing.correction",
       services: [
         { nameKey: 'pricing.correction.service.any', price: "200 zł" }
-      ],
-      discountPrice: "от 160 zł"
+      ]
     }
   ];
 
@@ -64,7 +63,7 @@ export default function Pricing() {
           <p className="text-gray-600 text-lg">{t('pricing.subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingCards.map((card, index) => (
             <div
               key={card.id}
@@ -95,17 +94,19 @@ export default function Pricing() {
                   </span>
                 </div>
 
-                <div className="bg-red-50 text-red-700 text-sm font-medium py-2 px-4 rounded-lg mb-6" data-testid={`discount-ribbon-${card.id}`}>
-                  {t('pricing.discountRibbon')}
-                </div>
+                {card.discountPrice && (
+                  <div className="bg-red-50 text-red-700 text-sm font-medium py-2 px-4 rounded-lg mb-6" data-testid={`discount-ribbon-${card.id}`}>
+                    {t('pricing.discountRibbon')}
+                  </div>
+                )}
 
                 <ul className="text-left space-y-3 mb-8">
                   {card.services.map((service, serviceIndex) => (
-                    <li key={serviceIndex} className="flex items-start">
+                    <li key={serviceIndex} className="flex items-start min-w-0">
                       <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-sm text-gray-600" data-testid={`service-name-${card.id}-${serviceIndex}`}>
+                      <span className="text-sm text-gray-600 truncate flex-1 min-w-0" data-testid={`service-name-${card.id}-${serviceIndex}`}>
                         {service.nameKey ? t(service.nameKey) : ''}
                       </span>
                     </li>

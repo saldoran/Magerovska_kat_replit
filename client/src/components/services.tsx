@@ -59,21 +59,21 @@ export default function Services() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2" data-testid={`service-title-${service.id}`}>
                   {t(service.titleKey)}
                 </h3>
-                <p className="text-gray-600 text-sm">{t(service.descKey)}</p>
+                <p className="text-gray-600 text-sm line-clamp-3">{t(service.descKey)}</p>
               </div>
               
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">{t('services.label.duration')}</span>
-                  <span className="font-medium" data-testid={`service-duration-${service.id}`}>{service.duration}</span>
+              <div className="space-y-3 mb-6 min-w-0">
+                <div className="flex justify-between text-sm min-w-0 gap-2">
+                  <span className="text-gray-500 flex-shrink-0">{t('services.label.duration')}</span>
+                  <span className="font-medium truncate flex-1 min-w-0 text-right" data-testid={`service-duration-${service.id}`}>{service.duration}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">{t('services.label.healing')}</span>
-                  <span className="font-medium" data-testid={`service-healing-${service.id}`}>{service.healing}</span>
+                <div className="flex justify-between text-sm min-w-0 gap-2">
+                  <span className="text-gray-500 flex-shrink-0">{t('services.label.healing')}</span>
+                  <span className="font-medium truncate flex-1 min-w-0 text-right" data-testid={`service-healing-${service.id}`}>{service.healing}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">{t('services.label.lasting')}</span>
-                  <span className="font-medium" data-testid={`service-lasting-${service.id}`}>{service.lasting}</span>
+                <div className="flex justify-between text-sm min-w-0 gap-2">
+                  <span className="text-gray-500 flex-shrink-0">{t('services.label.lasting')}</span>
+                  <span className="font-medium truncate flex-1 min-w-0 text-right" data-testid={`service-lasting-${service.id}`}>{service.lasting}</span>
                 </div>
               </div>
               

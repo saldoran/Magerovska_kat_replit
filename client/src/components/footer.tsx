@@ -69,6 +69,18 @@ export default function Footer() {
               >
                 <FaTelegram className="w-6 h-6 text-white" />
               </a>
+              <a 
+                href="https://theahstudio.booksy.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                style={{ backgroundColor: '#3a3a3a' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a4a4a'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
+                data-testid="social-booksy"
+              >
+                <span className="text-white text-xs font-bold">B</span>
+              </a>
             </div>
           </div>
         </div>

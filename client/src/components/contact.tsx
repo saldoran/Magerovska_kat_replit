@@ -130,14 +130,10 @@ export default function Contact() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="brows-powder">{t('contact.form.service.eyebrows')}</SelectItem>
-                            <SelectItem value="brows-ombre">{t('contact.form.service.eyebrows')}</SelectItem>
-                            <SelectItem value="lip-blush">{t('contact.form.service.lips')}</SelectItem>
-                            <SelectItem value="lip-contour">{t('contact.form.service.lips')}</SelectItem>
-                            <SelectItem value="lash-line-top">{t('contact.form.service.eyeliner')}</SelectItem>
-                            <SelectItem value="lash-line-bottom">{t('contact.form.service.eyeliner')}</SelectItem>
-                            <SelectItem value="complex">{t('contact.form.service.complex')}</SelectItem>
-                            <SelectItem value="consultation">{t('contact.form.service.consultation')}</SelectItem>
+                            <SelectItem value="brows">{t('contact.form.service.eyebrows')}</SelectItem>
+                            <SelectItem value="lips">{t('contact.form.service.lips')}</SelectItem>
+                            <SelectItem value="eyeliner">{t('contact.form.service.eyeliner')}</SelectItem>
+                            <SelectItem value="correction">{t('contact.form.service.correction')}</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -156,6 +152,7 @@ export default function Contact() {
                             placeholder={t('contact.form.placeholder.message')}
                             className="resize-none"
                             rows={4}
+                            maxLength={500}
                             {...field}
                             value={field.value || ""}
                             data-testid="textarea-message"
