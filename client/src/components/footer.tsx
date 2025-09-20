@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MessageCircle, Instagram } from "lucide-react";
 import { FaTelegram } from "react-icons/fa";
-import booksyIcon from "@assets/image_1758384149774.png";
+import booksyIcon from "@assets/images_1758392876913.png";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -23,9 +23,13 @@ export default function Footer() {
             <h3 className="text-white text-2xl font-semibold mb-3" data-testid="footer-email-title">
               Email
             </h3>
-            <p className="text-gray-300 text-lg" data-testid="footer-email-address">
-              info@magerovska.com
-            </p>
+            <a 
+              href="mailto:Magerovskayakate@gmail.com" 
+              className="text-gray-300 text-lg hover:text-white transition-colors underline"
+              data-testid="footer-email-address"
+            >
+              Magerovskayakate@gmail.com
+            </a>
           </div>
 
           {/* Social Media Icons */}
