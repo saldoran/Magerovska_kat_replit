@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'ru' | 'pl' | 'en' | 'uk';
 
@@ -598,13 +598,68 @@ const translations = {
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('ru');
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Detect user's preferred language automatically
+  const detectLanguageAndSet = () => {
+    try {
+      // Check if user already has a saved language preference
+      const savedLanguage = localStorage.getItem('preferred-language') as Language;
+      if (savedLanguage && ['ru', 'pl', 'en', 'uk'].includes(savedLanguage)) {
+        setLanguage(savedLanguage);
+        setIsInitialized(true);
+        return;
+      }
+
+      // Try to detect preferred language from browser settings
+      const browserLanguage = navigator.language || 'ru';
+      const languageCode = browserLanguage.toLowerCase();
+
+      // Map browser language codes to our supported languages
+      if (languageCode.startsWith('uk') || languageCode.includes('ukrainian')) {
+        setLanguage('uk');
+        localStorage.setItem('auto-detected-language', 'uk');
+      } else if (languageCode.startsWith('pl') || languageCode.includes('polish')) {
+        setLanguage('pl');
+        localStorage.setItem('auto-detected-language', 'pl');
+      } else if (languageCode.startsWith('en')) {
+        setLanguage('en');
+        localStorage.setItem('auto-detected-language', 'en');
+      } else {
+        // Default to Russian for other languages (including ru)
+        setLanguage('ru');
+        localStorage.setItem('auto-detected-language', 'ru');
+      }
+    } catch (error) {
+      // Fallback to Russian if detection fails
+      console.log('Language detection failed, using default Russian');
+      setLanguage('ru');
+    } finally {
+      setIsInitialized(true);
+    }
+  };
+
+  // Enhanced setLanguage function that saves preference
+  const setLanguageWithSave = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('preferred-language', lang);
+  };
+
+  useEffect(() => {
+    detectLanguageAndSet();
+  }, []);
 
   const t = (key: string): string => {
     return (translations[language] as any)[key] || key;
   };
 
+  // Don't render until language is initialized to prevent flash
+  if (!isInitialized) {
+    return null;
+  }
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: setLanguageWithSave, t }}>
       {children}
     </LanguageContext.Provider>
   );
