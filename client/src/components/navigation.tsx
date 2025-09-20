@@ -12,6 +12,7 @@ export default function Navigation() {
     { code: 'ru' as Language, name: 'RU', flag: '🇷🇺' },
     { code: 'pl' as Language, name: 'PL', flag: '🇵🇱' },
     { code: 'en' as Language, name: 'EN', flag: '🇺🇸' },
+    { code: 'uk' as Language, name: 'UA', flag: '🇺🇦' },
   ];
 
   // Disable body scroll when mobile menu is open
