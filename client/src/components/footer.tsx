@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MessageCircle, Instagram } from "lucide-react";
 import { FaTelegram } from "react-icons/fa";
+import booksyIcon from "@assets/image_1758384149774.png";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -79,7 +80,7 @@ export default function Footer() {
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3a3a3a'}
                 data-testid="social-booksy"
               >
-                <span className="text-white text-xs font-bold">B</span>
+                <img src={booksyIcon} alt="Booksy" className="w-6 h-6" />
               </a>
             </div>
           </div>

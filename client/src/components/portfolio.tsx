@@ -1,8 +1,8 @@
 // Import real portfolio images
 import portfolioImage1 from "@assets/1_1757168233012.jpeg";
-import portfolioImage2 from "@assets/2_1757168245430.jpeg";
-import portfolioImage3 from "@assets/3_1757168245412.jpeg";
-import portfolioImage4 from "@assets/4_1757168245430.jpeg";
+import portfolioImage2 from "@assets/3_1757168245412.jpeg";
+import portfolioImage3 from "@assets/2_1757168245430.jpeg";
+import portfolioImage4 from "@assets/399285892_1772552506592170_8578460010231776318_n_1758384176951.jpg";
 import portfolioImage5 from "@assets/4_1_1757168245430.jpeg";
 import portfolioImage6 from "@assets/5_1757168245430.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
