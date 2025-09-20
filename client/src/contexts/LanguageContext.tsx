@@ -21,8 +21,8 @@ const translations = {
     // Hero
     'hero.title': 'Перманентный макияж, который выглядит естественно — как вы',
     'hero.subtitle': 'Брови, губы, межресничка + 20% скидка на первый визит',
-    'hero.slogan': 'Перманентный макияж, который выглядит естественно — как вы. Брови, губы, межресничка в Москве.',
-    'hero.cta': 'Записаться на консультацию',
+    'hero.slogan': 'Перманентный макияж, который выглядит естественно — как вы. Брови, губы, межресничка в Кракове.',
+    'hero.cta': 'Записаться на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
     // Portfolio
@@ -75,9 +75,9 @@ const translations = {
   // Pricing extra
   'pricing.popular': 'Популярно',
   'pricing.discountRibbon': '🎉 Скидка 20% на первый визит',
-  'pricing.freeCorrection': 'Бесплатная коррекция через 4-6 недель',
+  'pricing.freeCorrection': 'Коррекция через 4-6 недель',
   'pricing.certifiedPigments': 'Сертифицированные пигменты',
-  'pricing.bookButton': 'Записаться на консультацию',
+  'pricing.bookButton': 'Записаться на процедуру',
   'pricing.packages.title': '💎 Комплексные предложения',
   'pricing.package.browsLips': 'Брови + Губы',
   'pricing.package.allZones': 'Все три зоны',
@@ -91,9 +91,11 @@ const translations = {
   'pricing.eyeliner.service.upper': 'Межресничка верх',
   'pricing.eyeliner.service.lower': 'Межресничка низ',
   'pricing.eyeliner.service.correction': 'Коррекция',
+    'pricing.correction': 'Коррекция',
+    'pricing.correction.service.any': 'Любой зоны',
     
     // Contact
-    'contact.title': 'Записаться на консультацию',
+    'contact.title': 'Записаться на процедуру',
     'contact.subtitle': 'Оставьте заявку, и мы свяжемся с вами в течение 24 часов',
     'contact.form.name': 'Имя',
     'contact.form.phone': 'Телефон',
@@ -128,7 +130,7 @@ const translations = {
   'process.step3.title': 'Пигментация',
   'process.step3.description': 'Процедура выполняется с использованием качественных пигментов и современного оборудования',
   'process.step4.title': 'Уход',
-  'process.step4.description': 'Подробные рекомендации по уходу и бесплатная коррекция через 4-6 недель при необходимости',
+  'process.step4.description': 'Подробные рекомендации по уходу и коррекция через 4-6 недель при необходимости',
   // Services labels and durations
   'services.label.duration': 'Длительность:',
   'services.label.healing': 'Заживление:',
@@ -165,8 +167,8 @@ const translations = {
     // Hero
     'hero.title': 'Makijaż permanentny, który wygląda naturalnie — jak Ty',
     'hero.subtitle': 'Brwi, usta, kreska + 20% zniżki na pierwszą wizytę',
-    'hero.slogan': 'Makijaż permanentny, który wygląda naturalnie — jak Ty. Brwi, usta, kreska w Warszawie.',
-    'hero.cta': 'Umów konsultację',
+    'hero.slogan': 'Makijaż permanentny, który wygląda naturalnie — jak Ty. Brwi, usta, kreska w Krakowie.',
+    'hero.cta': 'Umów zabieg',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
     // Portfolio
@@ -206,9 +208,9 @@ const translations = {
     // Pricing extra
     'pricing.popular': 'Popularne',
     'pricing.discountRibbon': '🎉 20% zniżki na pierwszą wizytę',
-    'pricing.freeCorrection': 'Bezpłatna korekta po 4-6 tygodniach',
+    'pricing.freeCorrection': 'Korekta po 4-6 tygodniach',
     'pricing.certifiedPigments': 'Certyfikowane pigmenty',
-    'pricing.bookButton': 'Umów konsultację',
+    'pricing.bookButton': 'Umów zabieg',
     'pricing.packages.title': '💎 Oferty pakietowe',
     'pricing.package.browsLips': 'Brwi + Usta',
     'pricing.package.allZones': 'Wszystkie trzy strefy',
@@ -222,9 +224,11 @@ const translations = {
     'pricing.eyeliner.service.upper': 'Międzyrzęsna góra',
     'pricing.eyeliner.service.lower': 'Międzyrzęsna dół',
     'pricing.eyeliner.service.correction': 'Korekta',
+    'pricing.correction': 'Korekta',
+    'pricing.correction.service.any': 'Dowolna strefa',
     
     // Contact
-    'contact.title': 'Umów konsultację',
+    'contact.title': 'Umów zabieg',
     'contact.subtitle': 'Zostaw zgłoszenie, a skontaktujemy się z Tobą w ciągu 24 godzin',
     'contact.form.name': 'Imię',
     'contact.form.phone': 'Telefon',
@@ -262,7 +266,7 @@ const translations = {
   'process.step3.title': 'Pigmentacja',
   'process.step3.description': 'Zabieg wykonywany z użyciem wysokiej jakości pigmentów i nowoczesnego sprzętu',
   'process.step4.title': 'Pielęgnacja',
-  'process.step4.description': 'Szczegółowe zalecenia pielęgnacyjne i bezpłatna korekta po 4-6 tygodniach w razie potrzeby',
+  'process.step4.description': 'Szczegółowe zalecenia pielęgnacyjne i korekta po 4-6 tygodniach w razie potrzeby',
   // Services labels and durations
   'services.label.duration': 'Czas trwania:',
   'services.label.healing': 'Okres gojenia:',
@@ -299,8 +303,8 @@ const translations = {
     // Hero
     'hero.title': 'Permanent makeup that looks natural — like you',
     'hero.subtitle': 'Eyebrows, lips, eyeliner + 20% off first visit',
-    'hero.slogan': 'Permanent makeup that looks natural — like you. Eyebrows, lips, eyeliner in Warsaw.',
-    'hero.cta': 'Book consultation',
+    'hero.slogan': 'Permanent makeup that looks natural — like you. Eyebrows, lips, eyeliner in Krakow.',
+    'hero.cta': 'Book procedure',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
     // Portfolio
@@ -353,9 +357,9 @@ const translations = {
     // Pricing extra
     'pricing.popular': 'Popular',
     'pricing.discountRibbon': '🎉 20% off first visit',
-    'pricing.freeCorrection': 'Free touch-up after 4-6 weeks',
+    'pricing.freeCorrection': 'Touch-up after 4-6 weeks',
     'pricing.certifiedPigments': 'Certified pigments',
-    'pricing.bookButton': 'Book consultation',
+    'pricing.bookButton': 'Book procedure',
     'pricing.packages.title': '💎 Package deals',
     'pricing.package.browsLips': 'Brows + Lips',
     'pricing.package.allZones': 'All three zones',
@@ -369,9 +373,11 @@ const translations = {
     'pricing.eyeliner.service.upper': 'Upper lashline',
     'pricing.eyeliner.service.lower': 'Lower lashline',
     'pricing.eyeliner.service.correction': 'Correction',
+    'pricing.correction': 'Correction',
+    'pricing.correction.service.any': 'Any zone',
     
     // Contact
-    'contact.title': 'Book consultation',
+    'contact.title': 'Book procedure',
     'contact.subtitle': 'Leave a request and we will contact you within 24 hours',
     'contact.form.name': 'Name',
     'contact.form.phone': 'Phone',
@@ -409,7 +415,7 @@ const translations = {
   'process.step3.title': 'Pigmentation',
   'process.step3.description': 'The procedure is performed using quality pigments and modern equipment',
   'process.step4.title': 'Aftercare',
-  'process.step4.description': 'Detailed aftercare recommendations and a free touch-up after 4-6 weeks if needed',
+  'process.step4.description': 'Detailed aftercare recommendations and a touch-up after 4-6 weeks if needed',
   // Services labels and durations
   'services.label.duration': 'Duration:',
   'services.label.healing': 'Healing:',
@@ -447,7 +453,7 @@ const translations = {
     'hero.title': 'Перманентний макіяж, що виглядає природньо — як ви',
     'hero.subtitle': 'Брови, губи, міжвійкова + 20% знижка на перший візит',
     'hero.slogan': 'Перманентний макіяж, що виглядає природньо — як ви. Брови, губи, міжвійкова в Києві.',
-    'hero.cta': 'Записатися на консультацію',
+    'hero.cta': 'Записатися на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
     // Portfolio
@@ -500,9 +506,9 @@ const translations = {
     // Pricing extra
     'pricing.popular': 'Популярно',
     'pricing.discountRibbon': '🎉 Знижка 20% на перший візит',
-    'pricing.freeCorrection': 'Безкоштовна корекція через 4-6 тижнів',
+    'pricing.freeCorrection': 'Корекція через 4-6 тижнів',
     'pricing.certifiedPigments': 'Сертифіковані пігменти',
-    'pricing.bookButton': 'Записатися на консультацію',
+    'pricing.bookButton': 'Записатися на процедуру',
     'pricing.packages.title': '💎 Комплексні пропозиції',
     'pricing.package.browsLips': 'Брови + Губи',
     'pricing.package.allZones': 'Усі три зони',
@@ -516,9 +522,11 @@ const translations = {
     'pricing.eyeliner.service.upper': 'Міжвійкова верх',
     'pricing.eyeliner.service.lower': 'Міжвійкова низ',
     'pricing.eyeliner.service.correction': 'Корекція',
+    'pricing.correction': 'Корекція',
+    'pricing.correction.service.any': 'Будь-якої зони',
     
     // Contact
-    'contact.title': 'Записатися на консультацію',
+    'contact.title': 'Записатися на процедуру',
     'contact.subtitle': 'Залиште заявку, і ми зв\'яжемось з вами протягом 24 годин',
     'contact.form.name': 'Ім\'я',
     'contact.form.phone': 'Телефон',
@@ -553,7 +561,7 @@ const translations = {
     'process.step3.title': 'Пігментація',
     'process.step3.description': 'Процедура виконується з використанням якісних пігментів і сучасного обладнання',
     'process.step4.title': 'Догляд',
-    'process.step4.description': 'Детальні рекомендації щодо догляду і безкоштовна корекція через 4-6 тижнів за необхідності',
+    'process.step4.description': 'Детальні рекомендації щодо догляду і корекція через 4-6 тижнів за необхідності',
     // Services labels and durations
     'services.label.duration': 'Тривалість:',
     'services.label.healing': 'Загоювання:',

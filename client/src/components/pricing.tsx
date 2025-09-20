@@ -28,7 +28,7 @@ export default function Pricing() {
       icon: <Heart className="w-8 h-8" />,
       titleKey: "pricing.lips",
       services: [
-        { nameKey: 'pricing.lips.service.lipBlush', price: "400 zł" },
+        { nameKey: 'pricing.lips.service.lipBlush', price: "450 zł" },
         { nameKey: 'pricing.lips.service.contour', price: "350 zł" },
         { nameKey: 'pricing.lips.service.correction', price: "120 zł" }
       ],
@@ -39,11 +39,20 @@ export default function Pricing() {
       icon: <Eye className="w-8 h-8" />,
       titleKey: "pricing.eyeliner",
       services: [
-        { nameKey: 'pricing.eyeliner.service.upper', price: "300 zł" },
+        { nameKey: 'pricing.eyeliner.service.upper', price: "350 zł" },
         { nameKey: 'pricing.eyeliner.service.lower', price: "200 zł" },
         { nameKey: 'pricing.eyeliner.service.correction', price: "100 zł" }
       ],
       discountPrice: "от 240 zł"
+    },
+    {
+      id: 4,
+      icon: <Sparkles className="w-8 h-8" />,
+      titleKey: "pricing.correction",
+      services: [
+        { nameKey: 'pricing.correction.service.any', price: "200 zł" }
+      ],
+      discountPrice: "от 160 zł"
     }
   ];
 
