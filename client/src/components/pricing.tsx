@@ -67,7 +67,7 @@ export default function Pricing() {
           {pricingCards.map((card, index) => (
             <div
               key={card.id}
-              className="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in"
+              className="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 fade-in flex flex-col h-full"
               data-delay={100 * (index + 1)}
               data-testid={`pricing-card-${card.id}`}
             >
@@ -83,7 +83,7 @@ export default function Pricing() {
                 </div>
               )}
               
-              <div className="text-center">
+              <div className="text-center flex flex-col h-full">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4" data-testid={`pricing-title-${card.id}`}>
                   {t(card.titleKey)}
                 </h3>
@@ -100,7 +100,7 @@ export default function Pricing() {
                   </div>
                 )}
 
-                <ul className="text-left space-y-3 mb-8">
+                <ul className="text-left space-y-3 mb-8 flex-grow">
                   {card.services.map((service, serviceIndex) => (
                     <li key={serviceIndex} className="flex items-start min-w-0">
                       <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
