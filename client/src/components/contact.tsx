@@ -5,6 +5,7 @@ import { MapPin, Phone, Clock, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { PhoneInput } from "@/components/ui/phone-input";
 import {
   Form,
   FormControl,
@@ -105,10 +106,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>{t('contact.form.phone')}</FormLabel>
                         <FormControl>
-                          <Input
-                            type="tel"
+                          <PhoneInput
+                            value={field.value}
+                            onChange={field.onChange}
                             placeholder={t('contact.form.placeholder.phone')}
-                            {...field}
                             data-testid="input-phone"
                           />
                         </FormControl>
