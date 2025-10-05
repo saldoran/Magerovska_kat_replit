@@ -115,6 +115,9 @@ const translations = {
   'contact.toast.errorTitle': 'Ошибка',
   'contact.toast.errorDescription': 'Не удалось отправить заявку. Попробуйте еще раз.',
     'contact.success': 'Спасибо! Ваша заявка отправлена.',
+    'contact.validation.nameRequired': 'Имя обязательно',
+    'contact.validation.serviceRequired': 'Выберите услугу',
+    'contact.validation.phoneRequired': 'Телефон обязателен',
     
     // Footer
     'footer.address': 'Адрес',
@@ -262,6 +265,9 @@ const translations = {
   'contact.toast.errorTitle': 'Błąd',
   'contact.toast.errorDescription': 'Nie udało się wysłać zgłoszenia. Spróbuj ponownie.',
     'contact.success': 'Dziękujemy! Twoje zgłoszenie zostało wysłane.',
+    'contact.validation.nameRequired': 'Imię jest wymagane',
+    'contact.validation.serviceRequired': 'Wybierz usługę',
+    'contact.validation.phoneRequired': 'Telefon jest wymagany',
     
     // Footer
     'footer.address': 'Adres',
@@ -412,6 +418,9 @@ const translations = {
   'contact.toast.errorTitle': 'Error',
   'contact.toast.errorDescription': 'Failed to send request. Please try again.',
     'contact.success': 'Thank you! Your request has been sent.',
+    'contact.validation.nameRequired': 'Name is required',
+    'contact.validation.serviceRequired': 'Please select a service',
+    'contact.validation.phoneRequired': 'Phone number is required',
     
     // Footer
     'footer.address': 'Address',
@@ -562,6 +571,9 @@ const translations = {
     'contact.toast.errorTitle': 'Помилка',
     'contact.toast.errorDescription': 'Не вдалося надіслати заявку. Спробуйте ще раз.',
     'contact.success': 'Дякуємо! Вашу заявку надіслано.',
+    'contact.validation.nameRequired': 'Ім\'я обов\'язкове',
+    'contact.validation.serviceRequired': 'Оберіть послугу',
+    'contact.validation.phoneRequired': 'Телефон обов\'язковий',
     
     // Footer
     'footer.address': 'Адреса',
