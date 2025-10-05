@@ -109,7 +109,6 @@ export default function Contact() {
                           <PhoneInput
                             value={field.value}
                             onChange={field.onChange}
-                            placeholder={t('contact.form.placeholder.phone')}
                             data-testid="input-phone"
                           />
                         </FormControl>

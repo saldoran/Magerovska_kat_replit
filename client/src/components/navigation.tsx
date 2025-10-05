@@ -51,28 +51,28 @@ export default function Navigation() {
             <div className="hidden md:flex space-x-8">
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
+                className="text-white border-b-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-portfolio"
               >
                 {t('nav.portfolio')}
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
+                className="text-white border-b-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-services"
               >
                 {t('nav.services')}
               </button>
               <button
                 onClick={() => scrollToSection('pricing')}
-                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
+                className="text-white border-b-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-pricing"
               >
                 {t('nav.pricing')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-white border-t-2 border-transparent hover:border-white transition-colors duration-200"
+                className="text-white border-b-2 border-transparent hover:border-white transition-colors duration-200"
                 data-testid="nav-contact"
               >
                 {t('nav.contact')}
@@ -89,7 +89,7 @@ export default function Navigation() {
                   onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
                   data-testid="button-language-dropdown"
                 >
-                  {languages.find(lang => lang.code === language)?.flag} {languages.find(lang => lang.code === language)?.name}
+                  {languages.find(lang => lang.code === language)?.name}
                   <ChevronDown className="ml-1 h-3 w-3" />
                 </Button>
 
@@ -107,7 +107,7 @@ export default function Navigation() {
                         }`}
                         data-testid={`language-option-${lang.code}`}
                       >
-                        {lang.flag} {lang.name}
+                        {lang.name}
                       </button>
                     ))}
                   </div>
