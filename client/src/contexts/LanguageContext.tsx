@@ -491,7 +491,7 @@ const translations = {
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
     // Site Title
-    'site.title': 'Magerovska Permanent | Перманентний макіяж у Кракові',
+    'site.title': 'Magerovska Permanent | Перманентний макіяж у Кракові та Києві',
     
     // Portfolio
     'portfolio.title': 'Портфоліо робіт',
