@@ -191,10 +191,10 @@ function getOGLocale(language: string): string {
 
 function getSEOKeywords(language: string): string {
   const keywords: Record<string, string> = {
-    ru: 'перманентный макияж Краков, перманент бровей, перманент губ, микроблейдинг, татуаж, пудровые брови, lip blush',
-    pl: 'makijaż permanentny Kraków, brwi permanentne, usta permanentne, microblading, tatuaż, brwi pudrowe, lip blush',
-    en: 'permanent makeup Krakow, eyebrow tattoo, lip blush, microblading, powder brows, permanent cosmetics',
-    uk: 'перманентний макіяж Краків, перманент брів, перманент губ, мікроблейдінг, пудрові брови'
+    ru: 'перманентный макияж Краков, перманент бровей, перманент губ, микроблейдинг, татуаж, пудровые брови, lip blush, перманентный макияж цена Краков, мастер перманентного макияжа, записаться на перманент, перманент межресничка, волосковая техника, теневая растушевка, омбре брови, акварельные губы, естественный перманент, перманентный макияж Казимеж, татуаж бровей Краков, коррекция перманента, удаление татуажа, профессиональный перманент, безопасный перманент, заживление перманента, уход после перманента',
+    pl: 'makijaż permanentny Kraków, brwi permanentne, usta permanentne, microblading, tatuaż, brwi pudrowe, lip blush, makijaż permanentny cena Kraków, mistrz makijażu permanentnego, umówić się na makijaż permanentny, kreska międzyrzęsowa, technika włoskowa, cieniowanie, brwi ombre, naturalny makijaż permanentny, makijaż permanentny Kazimierz, tatuaż brwi Kraków, korekta makijażu permanentnego, usuwanie tatuażu, profesjonalny makijaż permanentny, bezpieczny makijaż permanentny, gojenie makijażu permanentnego, pielęgnacja po makijażu permanentnym, makijaż permanentny opinie',
+    en: 'permanent makeup Krakow, eyebrow tattoo, lip blush, microblading, powder brows, permanent cosmetics, permanent makeup price Krakow, permanent makeup artist, book permanent makeup, eyeliner tattoo, hair stroke technique, ombre brows, natural permanent makeup, permanent makeup Kazimierz, eyebrow tattoo Krakow, permanent makeup correction, tattoo removal, professional permanent makeup, safe permanent makeup, permanent makeup healing, aftercare permanent makeup, permanent makeup reviews',
+    uk: 'перманентний макіяж Краків, перманент брів, перманент губ, мікроблейдінг, пудрові брови, перманентний макіяж ціна Краків, майстер перманентного макіяжу, записатися на перманент, перманент міжвійки, волоскова техніка, тіньова розтушовка, омбре брови, акварельні губи, природний перманент, татуаж брів Краків, корекція перманенту, професійний перманент, безпечний перманент, загоєння перманенту, догляд після перманенту'
   };
   return keywords[language] || keywords.en;
 }
