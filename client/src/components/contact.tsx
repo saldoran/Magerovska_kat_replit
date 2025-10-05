@@ -48,9 +48,46 @@ export default function Contact() {
 
   const submitContact = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
-      const dataWithLanguage = { ...data, language };
-      const response = await apiRequest('POST', '/api/contact', dataWithLanguage);
-      return await response.json();
+      // Submit directly to Google Form using a hidden iframe
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSewBcoX36YCswtZbrqpshUPNzvXYPrWIbZT_wUJwcXf3mzcvA/formResponse';
+      
+      const formData = new URLSearchParams();
+      formData.append('entry.137169618', data.name);
+      formData.append('entry.1522313548', data.phone);
+      formData.append('entry.1229865591', data.service);
+      formData.append('entry.608867818', data.message || '');
+      formData.append('entry.1004535607', language);
+      
+      // Create hidden iframe for submission
+      const iframe = document.createElement('iframe');
+      iframe.name = 'hidden_iframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      
+      // Create and submit form
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = googleFormUrl;
+      form.target = 'hidden_iframe';
+      
+      formData.forEach((value, key) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      });
+      
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Cleanup after a delay
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+      }, 1000);
+      
+      return { success: true };
     },
     onSuccess: () => {
       toast({
@@ -59,11 +96,10 @@ export default function Contact() {
       });
       form.reset();
     },
-    onError: (error: Error) => {
-      console.error('Form submission error:', error);
+    onError: () => {
       toast({
         title: t('contact.toast.errorTitle'),
-        description: error.message || t('contact.toast.errorDescription'),
+        description: t('contact.toast.errorDescription'),
         variant: "destructive",
       });
     },
