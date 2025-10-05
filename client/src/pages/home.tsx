@@ -9,15 +9,11 @@ import Testimonials from "@/components/testimonials";
 import FAQ from "@/components/faq";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import SEO from "@/components/seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
   const { t } = useLanguage();
-
-  // Update document title when language changes
-  useEffect(() => {
-    document.title = t('site.title');
-  }, [t]);
 
   useEffect(() => {
     // Fade-in animation on scroll
@@ -47,17 +43,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <Portfolio />
-      <Services />
-      <Process />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <SEO />
+      <div className="min-h-screen">
+        <Navigation />
+        <Hero />
+        <Portfolio />
+        <Services />
+        <Process />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
