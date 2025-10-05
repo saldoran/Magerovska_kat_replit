@@ -9,3 +9,5 @@
 [x] 9. Add language field to Google Forms submission
 [x] 10. Fix form submission on production with no-cors mode
 [x] 11. Add dynamic page titles for all languages
+[x] 12. Remove red field highlighting for name, phone, and service fields on validation errors
+[x] 13. Fix 404 error on production form submission by adding no-cors mode

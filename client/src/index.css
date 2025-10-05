@@ -103,10 +103,16 @@
     transform: translateX(0);
   }
 
-  /* Disable red border on form fields with errors */
+  /* Disable red border and red text on form fields with errors */
   input[aria-invalid="true"],
   textarea[aria-invalid="true"],
-  button[aria-invalid="true"] {
+  button[aria-invalid="true"],
+  [aria-invalid="true"] {
     border-color: hsl(var(--input)) !important;
+  }
+  
+  /* Remove red text from labels */
+  label[class*="text-destructive"] {
+    color: inherit !important;
   }
 }
