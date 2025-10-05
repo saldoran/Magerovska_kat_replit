@@ -28,15 +28,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: formData.toString(),
-        mode: 'no-cors',
       });
       
-      // Google Forms with no-cors mode doesn't return readable response
-      // If fetch doesn't throw, we assume success
-      res.status(201).json({
-        success: true,
-        message: "Contact submission sent successfully"
-      });
+      console.log('Google Form response status:', response.status);
+      
+      // Google Forms typically responds with 200 or redirects (3xx)
+      if (response.ok || (response.status >= 300 && response.status < 400)) {
+        res.status(201).json({
+          success: true,
+          message: "Contact submission sent successfully"
+        });
+      } else {
+        const responseText = await response.text();
+        console.error('Google Form submission failed:', response.status, responseText);
+        throw new Error(`Failed to submit to Google Forms (status: ${response.status})`);
+      }
       
     } catch (error) {
       if (error instanceof z.ZodError) {

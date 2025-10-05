@@ -46,7 +46,10 @@ export function createContactSubmissionSchema(translations: {
     message: true,
   }).extend({
     name: z.string().min(1, translations.nameRequired),
-    phone: z.string().min(1, translations.phoneRequired),
+    phone: z.string().min(5, translations.phoneRequired).refine(
+      (val) => /\d{3,}/.test(val), 
+      { message: translations.phoneRequired }
+    ),
     service: z.string().min(1, translations.serviceRequired),
   });
 }

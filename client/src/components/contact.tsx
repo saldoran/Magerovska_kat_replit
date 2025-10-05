@@ -59,10 +59,11 @@ export default function Contact() {
       });
       form.reset();
     },
-    onError: (error) => {
+    onError: (error: Error) => {
+      console.error('Form submission error:', error);
       toast({
         title: t('contact.toast.errorTitle'),
-        description: t('contact.toast.errorDescription'),
+        description: error.message || t('contact.toast.errorDescription'),
         variant: "destructive",
       });
     },
@@ -133,7 +134,7 @@ export default function Contact() {
                         <Select onValueChange={field.onChange} value={field.value}>
                           <FormControl>
                             <SelectTrigger data-testid="select-service">
-                              <SelectValue placeholder={t('contact.form.service')} />
+                              <SelectValue />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
