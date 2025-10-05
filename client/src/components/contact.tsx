@@ -23,15 +23,21 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
+import { createContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
 
+  const contactSchema = createContactSubmissionSchema({
+    nameRequired: t('contact.validation.nameRequired'),
+    phoneRequired: t('contact.validation.phoneRequired'),
+    serviceRequired: t('contact.validation.serviceRequired'),
+  });
+
   const form = useForm<InsertContactSubmission>({
-    resolver: zodResolver(insertContactSubmissionSchema),
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
       phone: "",
@@ -42,7 +48,8 @@ export default function Contact() {
 
   const submitContact = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
-      const response = await apiRequest('POST', '/api/contact', data);
+      const dataWithLanguage = { ...data, language };
+      const response = await apiRequest('POST', '/api/contact', dataWithLanguage);
       return await response.json();
     },
     onSuccess: () => {

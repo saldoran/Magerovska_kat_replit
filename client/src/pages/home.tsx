@@ -9,8 +9,16 @@ import Testimonials from "@/components/testimonials";
 import FAQ from "@/components/faq";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
+  // Update document title when language changes
+  useEffect(() => {
+    document.title = t('site.title');
+  }, [t]);
+
   useEffect(() => {
     // Fade-in animation on scroll
     const observerOptions = {

@@ -25,6 +25,9 @@ const translations = {
     'hero.cta': 'Записаться на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
+    // Site Title
+    'site.title': 'Magerovska Permanent | Перманентный макияж в Кракове',
+    
     // Portfolio
     'portfolio.title': 'Портфолио работ',
     'portfolio.subtitle': 'Реальные результаты наших клиенток',
@@ -174,6 +177,9 @@ const translations = {
     'hero.slogan': 'Makijaż permanentny, który wygląda naturalnie — jak Ty. Brwi, usta, kreska w Krakowie.',
     'hero.cta': 'Umów zabieg',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    
+    // Site Title
+    'site.title': 'Magerovska Permanent | Makijaż permanentny w Krakowie',
     
     // Portfolio
     'portfolio.title': 'Portfolio prac',
@@ -328,6 +334,9 @@ const translations = {
     'hero.cta': 'Book procedure',
     'hero.brand': 'MAGEROVSKA PERMANENT',
     
+    // Site Title
+    'site.title': 'Magerovska Permanent | Permanent Makeup in Krakow',
+    
     // Portfolio
     'portfolio.title': 'Portfolio of works',
     'portfolio.subtitle': 'Real results of our clients',
@@ -480,6 +489,9 @@ const translations = {
     'hero.slogan': 'Перманентний макіяж, що виглядає природньо — як ви. Брови, губи, міжвійкова в Києві.',
     'hero.cta': 'Записатися на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    
+    // Site Title
+    'site.title': 'Magerovska Permanent | Перманентний макіяж у Кракові',
     
     // Portfolio
     'portfolio.title': 'Портфоліо робіт',

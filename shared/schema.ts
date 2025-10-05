@@ -34,6 +34,23 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   service: z.string().min(1, "Please select a service"),
 });
 
+export function createContactSubmissionSchema(translations: {
+  nameRequired: string;
+  phoneRequired: string;
+  serviceRequired: string;
+}) {
+  return createInsertSchema(contactSubmissions).pick({
+    name: true,
+    phone: true,
+    service: true,
+    message: true,
+  }).extend({
+    name: z.string().min(1, translations.nameRequired),
+    phone: z.string().min(1, translations.phoneRequired),
+    service: z.string().min(1, translations.serviceRequired),
+  });
+}
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
