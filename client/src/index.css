@@ -102,4 +102,11 @@
   .mobile-menu.active {
     transform: translateX(0);
   }
+
+  /* Disable red border on form fields with errors */
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"],
+  button[aria-invalid="true"] {
+    border-color: hsl(var(--input)) !important;
+  }
 }

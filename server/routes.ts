@@ -26,6 +26,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Referer': 'https://docs.google.com/forms/d/e/1FAIpQLSewBcoX36YCswtZbrqpshUPNzvXYPrWIbZT_wUJwcXf3mzcvA/viewform',
+          'Origin': 'https://docs.google.com',
         },
         body: formData.toString(),
       });
