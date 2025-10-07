@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://magerovska-permanent.com/</loc>
-    <lastmod>2025-10-05</lastmod>
+    <loc>https://magerovska.com/</loc>
+    <lastmod>2025-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska-permanent.com/?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska-permanent.com/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska-permanent.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska-permanent.com/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska-permanent.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/"/>
+  </url>
+  <url>
+    <loc>https://magerovska.com/services/eyebrows</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/eyebrows?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/eyebrows?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/eyebrows?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/eyebrows?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/eyebrows"/>
+  </url>
+  <url>
+    <loc>https://magerovska.com/services/lips</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/lips?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/lips?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/lips?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/lips?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/lips"/>
+  </url>
+  <url>
+    <loc>https://magerovska.com/services/eyeliner</loc>
+    <lastmod>2025-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/eyeliner?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/eyeliner?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/eyeliner?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/eyeliner?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/eyeliner"/>
   </url>
 </urlset>

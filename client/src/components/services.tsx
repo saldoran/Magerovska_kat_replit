@@ -1,5 +1,7 @@
-import { Eye, Heart, Sparkles } from "lucide-react";
+import { Eye, Heart, Sparkles, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -9,27 +11,30 @@ export default function Services() {
       icon: <Sparkles className="w-8 h-8" />,
       titleKey: "services.eyebrows.title",
       descKey: "services.eyebrows.desc",
-  duration: t('services.eyebrows.duration'),
-  healing: t('services.eyebrows.healing'),
-  lasting: t('services.eyebrows.lasting')
+      duration: t('services.eyebrows.duration'),
+      healing: t('services.eyebrows.healing'),
+      lasting: t('services.eyebrows.lasting'),
+      link: "/services/eyebrows"
     },
     {
       id: 2,
       icon: <Heart className="w-8 h-8" />,
       titleKey: "services.lips.title",
       descKey: "services.lips.desc",
-  duration: t('services.lips.duration'),
-  healing: t('services.lips.healing'),
-  lasting: t('services.lips.lasting')
+      duration: t('services.lips.duration'),
+      healing: t('services.lips.healing'),
+      lasting: t('services.lips.lasting'),
+      link: "/services/lips"
     },
     {
       id: 3,
       icon: <Eye className="w-8 h-8" />,
       titleKey: "services.eyeliner.title",
       descKey: "services.eyeliner.desc",
-  duration: t('services.eyeliner.duration'),
-  healing: t('services.eyeliner.healing'),
-  lasting: t('services.eyeliner.lasting')
+      duration: t('services.eyeliner.duration'),
+      healing: t('services.eyeliner.healing'),
+      lasting: t('services.eyeliner.lasting'),
+      link: "/services/eyeliner"
     }
   ];
 
@@ -78,8 +83,16 @@ export default function Services() {
               </div>
               
               <div className="pt-4 border-t border-gray-100">
-                <p className="text-xs text-gray-500 leading-relaxed" data-testid={`service-description-${service.id}`}>
-                </p>
+                <Link href={service.link}>
+                  <Button 
+                    variant="ghost" 
+                    className="w-full group" 
+                    data-testid={`button-learn-more-${service.id}`}
+                  >
+                    {t('services.learnMore') || 'Узнать больше'}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

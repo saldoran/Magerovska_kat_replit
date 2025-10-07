@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Home from "@/pages/home";
+import Eyebrows from "@/pages/eyebrows";
+import Lips from "@/pages/lips";
+import Eyeliner from "@/pages/eyeliner";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -13,6 +16,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/magerovska_website" component={Home} />
       <Route path="/magerovska_website/" component={Home} />
+      <Route path="/services/eyebrows" component={Eyebrows} />
+      <Route path="/services/lips" component={Lips} />
+      <Route path="/services/eyeliner" component={Eyeliner} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -60,6 +60,7 @@ const translations = {
     // Services
     'services.title': 'Наши услуги',
     'services.subtitle': 'Профессиональный перманентный макияж с гарантией качества',
+    'services.learnMore': 'Узнать больше',
     'services.eyebrows.title': 'Брови',
     'services.eyebrows.desc': 'Натуральные брови с идеальной формой, подчеркивающей ваши черты лица.',
     'services.lips.title': 'Губы',
@@ -123,10 +124,15 @@ const translations = {
     'contact.validation.phoneRequired': 'Телефон обязателен',
     
     // Footer
-    'footer.address': 'Адрес',
-    'footer.phone': 'Телефон',
     'footer.email': 'Email',
     'footer.social': 'Социальные сети',
+    'footer.contact': 'Контакты',
+    'footer.address': 'Адрес',
+    'footer.addressValue': 'Краков, Польша',
+    'footer.phone': 'Телефон',
+    'footer.phoneValue': '+48 XXX XXX XXX',
+    'footer.hours': 'Часы работы',
+    'footer.hoursValue': 'Пн-Пт: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. Все права защищены.',
   // Process
   'process.title': 'Процесс',
@@ -213,6 +219,7 @@ const translations = {
     // Services
     'services.title': 'Nasze usługi',
     'services.subtitle': 'Profesjonalny makijaż permanentny z gwarancją jakości',
+    'services.learnMore': 'Dowiedz się więcej',
     'services.eyebrows.title': 'Brwi',
     'services.eyebrows.desc': 'Naturalne brwi o idealnym kształcie, podkreślającym rysy twarzy.',
     'services.lips.title': 'Usta',
@@ -276,10 +283,15 @@ const translations = {
     'contact.validation.phoneRequired': 'Telefon jest wymagany',
     
     // Footer
-    'footer.address': 'Adres',
-    'footer.phone': 'Telefon',
     'footer.email': 'Email',
     'footer.social': 'Media społecznościowe',
+    'footer.contact': 'Kontakt',
+    'footer.address': 'Adres',
+    'footer.addressValue': 'Kraków, Polska',
+    'footer.phone': 'Telefon',
+    'footer.phoneValue': '+48 XXX XXX XXX',
+    'footer.hours': 'Godziny otwarcia',
+    'footer.hoursValue': 'Pn-Pt: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. Wszystkie prawa zastrzeżone.',
   // Not Found
   'notfound.title': '404 Strona nie znaleziona',
@@ -369,6 +381,7 @@ const translations = {
     // Services
     'services.title': 'Our services',
     'services.subtitle': 'Professional permanent makeup with quality guarantee',
+    'services.learnMore': 'Learn more',
     'services.eyebrows.title': 'Eyebrows',
     'services.eyebrows.desc': 'Natural eyebrows with perfect shape that enhances your facial features.',
     'services.lips.title': 'Lips',
@@ -432,10 +445,15 @@ const translations = {
     'contact.validation.phoneRequired': 'Phone number is required',
     
     // Footer
-    'footer.address': 'Address',
-    'footer.phone': 'Phone',
     'footer.email': 'Email',
     'footer.social': 'Social media',
+    'footer.contact': 'Contact',
+    'footer.address': 'Address',
+    'footer.addressValue': 'Krakow, Poland',
+    'footer.phone': 'Phone',
+    'footer.phoneValue': '+48 XXX XXX XXX',
+    'footer.hours': 'Business hours',
+    'footer.hoursValue': 'Mon-Fri: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. All rights reserved.',
   // Not Found
   'notfound.title': '404 Page Not Found',
@@ -525,6 +543,7 @@ const translations = {
     // Services
     'services.title': 'Наші послуги',
     'services.subtitle': 'Професійний перманентний макіяж з гарантією якості',
+    'services.learnMore': 'Дізнатися більше',
     'services.eyebrows.title': 'Брови',
     'services.eyebrows.desc': 'Натуральні брови з ідеальною формою, що підкреслює ваші риси обличчя.',
     'services.lips.title': 'Губи',
@@ -588,10 +607,15 @@ const translations = {
     'contact.validation.phoneRequired': 'Телефон обов\'язковий',
     
     // Footer
-    'footer.address': 'Адреса',
-    'footer.phone': 'Телефон',
     'footer.email': 'Email',
     'footer.social': 'Соціальні мережі',
+    'footer.contact': 'Контакти',
+    'footer.address': 'Адреса',
+    'footer.addressValue': 'Краків, Польща',
+    'footer.phone': 'Телефон',
+    'footer.phoneValue': '+48 XXX XXX XXX',
+    'footer.hours': 'Години роботи',
+    'footer.hoursValue': 'Пн-Пт: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. Усі права захищені.',
     // Process
     'process.title': 'Процес',

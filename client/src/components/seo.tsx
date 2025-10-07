@@ -22,7 +22,10 @@ export default function SEO({
   const seoDescription = description || t('hero.slogan');
   const seoKeywords = keywords || getSEOKeywords(language);
   const siteName = 'Magerovska Permanent';
-  const siteUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://magerovska.com';
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const canonical = canonicalUrl || `${baseUrl}${pathname}`;
+  const siteUrl = canonical;
 
   useEffect(() => {
     document.title = seoTitle;
@@ -33,8 +36,8 @@ export default function SEO({
     
     updateMetaTag('property', 'og:title', seoTitle);
     updateMetaTag('property', 'og:description', seoDescription);
-    updateMetaTag('property', 'og:image', ogImage);
-    updateMetaTag('property', 'og:url', siteUrl);
+    updateMetaTag('property', 'og:image', `${baseUrl}${ogImage}`);
+    updateMetaTag('property', 'og:url', canonical);
     updateMetaTag('property', 'og:type', 'website');
     updateMetaTag('property', 'og:site_name', siteName);
     updateMetaTag('property', 'og:locale', getOGLocale(language));
@@ -42,16 +45,14 @@ export default function SEO({
     updateMetaTag('name', 'twitter:card', 'summary_large_image');
     updateMetaTag('name', 'twitter:title', seoTitle);
     updateMetaTag('name', 'twitter:description', seoDescription);
-    updateMetaTag('name', 'twitter:image', ogImage);
+    updateMetaTag('name', 'twitter:image', `${baseUrl}${ogImage}`);
     
-    if (canonicalUrl) {
-      updateLinkTag('canonical', canonicalUrl);
-    }
+    updateLinkTag('canonical', canonical);
     
-    updateAlternateLinks(language);
+    updateAlternateLinks(language, baseUrl, pathname);
     
     updateStructuredData(language, seoTitle, seoDescription);
-  }, [seoTitle, seoDescription, seoKeywords, ogImage, siteUrl, language, canonicalUrl, siteName]);
+  }, [seoTitle, seoDescription, seoKeywords, ogImage, canonical, language, siteName, baseUrl, pathname]);
 
   return null;
 }
@@ -80,8 +81,7 @@ function updateLinkTag(rel: string, href: string) {
   element.setAttribute('href', href);
 }
 
-function updateAlternateLinks(currentLang: string) {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+function updateAlternateLinks(currentLang: string, baseUrl: string, pathname: string) {
   const languages = ['ru', 'pl', 'en', 'uk'];
   
   languages.forEach(lang => {
@@ -95,7 +95,7 @@ function updateAlternateLinks(currentLang: string) {
       document.head.appendChild(element);
     }
     
-    element.setAttribute('href', `${baseUrl}?lang=${lang}`);
+    element.setAttribute('href', `${baseUrl}${pathname}?lang=${lang}`);
   });
   
   let xDefault = document.querySelector('link[hreflang="x-default"]') as HTMLLinkElement;
@@ -105,7 +105,7 @@ function updateAlternateLinks(currentLang: string) {
     xDefault.setAttribute('hreflang', 'x-default');
     document.head.appendChild(xDefault);
   }
-  xDefault.setAttribute('href', baseUrl);
+  xDefault.setAttribute('href', `${baseUrl}${pathname}`);
 }
 
 function updateStructuredData(language: string, title: string, description: string) {

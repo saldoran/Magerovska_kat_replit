@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MessageCircle, Instagram } from "lucide-react";
+import { MessageCircle, Instagram, MapPin, Phone, Clock } from "lucide-react";
 import { FaTelegram } from "react-icons/fa";
 import booksyIcon from "@assets/images_1758392876913.png";
 
@@ -86,6 +86,38 @@ export default function Footer() {
               >
                 <img src={booksyIcon} alt="Booksy" className="w-6 h-6" />
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div style={{ backgroundColor: '#292929' }} className="py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-white text-2xl font-semibold mb-8 text-center" data-testid="footer-contact-title">
+            {t('footer.contact')}
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-gray-400 mx-auto mb-3" />
+              <h4 className="text-white font-medium mb-2" data-testid="footer-address-label">{t('footer.address')}</h4>
+              <p className="text-gray-300" data-testid="footer-address-value">{t('footer.addressValue')}</p>
+            </div>
+            <div className="text-center">
+              <Phone className="w-8 h-8 text-gray-400 mx-auto mb-3" />
+              <h4 className="text-white font-medium mb-2" data-testid="footer-phone-label">{t('footer.phone')}</h4>
+              <a 
+                href={`tel:${t('footer.phoneValue')}`} 
+                className="text-gray-300 hover:text-white transition-colors"
+                data-testid="footer-phone-value"
+              >
+                {t('footer.phoneValue')}
+              </a>
+            </div>
+            <div className="text-center">
+              <Clock className="w-8 h-8 text-gray-400 mx-auto mb-3" />
+              <h4 className="text-white font-medium mb-2" data-testid="footer-hours-label">{t('footer.hours')}</h4>
+              <p className="text-gray-300" data-testid="footer-hours-value">{t('footer.hoursValue')}</p>
             </div>
           </div>
         </div>
