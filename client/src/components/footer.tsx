@@ -97,7 +97,7 @@ export default function Footer() {
           <h3 className="text-white text-2xl font-semibold mb-8 text-center" data-testid="footer-contact-title">
             {t('footer.contact')}
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <MapPin className="w-8 h-8 text-gray-400 mx-auto mb-3" />
               <h4 className="text-white font-medium mb-2" data-testid="footer-address-label">{t('footer.address')}</h4>
@@ -120,24 +120,9 @@ export default function Footer() {
               <p className="text-gray-300" data-testid="footer-hours-value">{t('footer.hoursValue')}</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Slogan Part - Brand Name and Description */}
-      <div style={{ backgroundColor: '#222222' }} className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Brand Name with Cursive Font */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
-              Magerovska permanent
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              {t('hero.slogan')}
-            </p>
-          </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-600 pt-8">
+          <div className="border-t border-gray-600 pt-8 text-center">
             <p className="text-gray-500 text-sm" data-testid="footer-copyright">
               {t('footer.copyright')}
             </p>
