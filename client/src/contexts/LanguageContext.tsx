@@ -17,6 +17,10 @@ const translations = {
     'nav.portfolio': 'Портфолио',
     'nav.pricing': 'Цены',
     'nav.contact': 'Контакты',
+    'breadcrumbs.label': 'Хлебные крошки',
+    'breadcrumbs.home': 'Главная',
+    'breadcrumbs.services': 'Услуги',
+    'breadcrumbs.back': 'Назад на главную',
     
     // Hero
     'hero.title': 'Перманентный макияж, который выглядит естественно — как вы',
@@ -24,6 +28,7 @@ const translations = {
     'hero.slogan': 'Перманентный макияж, который выглядит естественно — как вы. Брови, губы, межресничка в Кракове.',
     'hero.cta': 'Записаться на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    'hero.imageAlt': 'Клиентка после процедуры перманентного макияжа в студии Magerovska Permanent',
     
     // Site Title
     'site.title': 'Magerovska Permanent | Перманентный макияж в Кракове',
@@ -169,6 +174,10 @@ const translations = {
   'faq.item.4.answer': 'Да, есть ряд ограничений: беременность и лактация, онкология, сахарный диабет 1 типа, нарушения свертываемости крови, келоидные рубцы, острые воспалительные процессы. На консультации обязательно обсуждаем все нюансы и противопоказания.',
   'faq.item.5.question': 'Нужна ли коррекция?',
   'faq.item.5.answer': 'Коррекция рекомендуется через 4-6 недель после первой процедуры для достижения идеального результата. Это нормальная практика, так как кожа у всех заживает по-разному. В большинстве случаев одной коррекции достаточно на весь период носки.',
+  'notfound.title': 'Страница не найдена',
+  'notfound.description': 'Похоже, вы попали на несуществующую страницу. Воспользуйтесь кнопками ниже, чтобы вернуться на сайт.',
+  'notfound.backHome': 'На главную',
+  'notfound.contact': 'Связаться с мастером',
   },
   pl: {
     // Navigation
@@ -176,6 +185,10 @@ const translations = {
     'nav.portfolio': 'Portfolio',
     'nav.pricing': 'Cennik',
     'nav.contact': 'Kontakt',
+    'breadcrumbs.label': 'Okruszki nawigacyjne',
+    'breadcrumbs.home': 'Strona główna',
+    'breadcrumbs.services': 'Usługi',
+    'breadcrumbs.back': 'Powrót na stronę główną',
     
     // Hero
     'hero.title': 'Makijaż permanentny, który wygląda naturalnie — jak Ty',
@@ -183,6 +196,7 @@ const translations = {
     'hero.slogan': 'Makijaż permanentny, który wygląda naturalnie — jak Ty. Brwi, usta, kreska w Krakowie.',
     'hero.cta': 'Umów zabieg',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    'hero.imageAlt': 'Klientka po zabiegu makijażu permanentnego w studio Magerovska Permanent',
     
     // Site Title
     'site.title': 'Magerovska Permanent | Makijaż permanentny w Krakowie',
@@ -294,8 +308,10 @@ const translations = {
     'footer.hoursValue': 'Pn-Pt: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. Wszystkie prawa zastrzeżone.',
   // Not Found
-  'notfound.title': '404 Strona nie znaleziona',
-  'notfound.description': 'Czy вы забыли добавить страницу в маршрутизатор?',
+  'notfound.title': 'Strona nie została znaleziona',
+  'notfound.description': 'Wygląda na to, że ta strona nie istnieje. Skorzystaj z przycisków poniżej, aby wrócić na stronę główną.',
+  'notfound.backHome': 'Wróć na stronę główną',
+  'notfound.contact': 'Skontaktuj się z nami',
   // Process
   'process.title': 'Proces',
   'process.step1.title': 'Konsultacja',
@@ -338,6 +354,10 @@ const translations = {
     'nav.portfolio': 'Portfolio',
     'nav.pricing': 'Pricing',
     'nav.contact': 'Contact',
+    'breadcrumbs.label': 'Breadcrumb navigation',
+    'breadcrumbs.home': 'Home',
+    'breadcrumbs.services': 'Services',
+    'breadcrumbs.back': 'Back to homepage',
     
     // Hero
     'hero.title': 'Permanent makeup that looks natural — like you',
@@ -345,6 +365,7 @@ const translations = {
     'hero.slogan': 'Permanent makeup that looks natural — like you. Eyebrows, lips, eyeliner in Krakow.',
     'hero.cta': 'Book procedure',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    'hero.imageAlt': 'Client showcasing healed permanent makeup at the Magerovska Permanent studio in Kraków',
     
     // Site Title
     'site.title': 'Magerovska Permanent | Permanent Makeup in Krakow',
@@ -456,8 +477,10 @@ const translations = {
     'footer.hoursValue': 'Mon-Fri: 9:00-18:00',
     'footer.copyright': '© 2025 Magerovska Permanent. All rights reserved.',
   // Not Found
-  'notfound.title': '404 Page Not Found',
-  'notfound.description': 'Did you forget to add the page to the router?',
+  'notfound.title': 'Page not found',
+  'notfound.description': 'It looks like this page does not exist. Use the options below to get back on track.',
+  'notfound.backHome': 'Back to homepage',
+  'notfound.contact': 'Contact the artist',
   // Process
   'process.title': 'Process',
   'process.step1.title': 'Consultation',
@@ -500,6 +523,10 @@ const translations = {
     'nav.portfolio': 'Портфоліо',
     'nav.pricing': 'Ціни',
     'nav.contact': 'Контакти',
+    'breadcrumbs.label': 'Навігаційний ланцюжок',
+    'breadcrumbs.home': 'Головна',
+    'breadcrumbs.services': 'Послуги',
+    'breadcrumbs.back': 'Повернутися на головну',
     
     // Hero
     'hero.title': 'Перманентний макіяж, що виглядає природньо — як ви',
@@ -507,6 +534,7 @@ const translations = {
     'hero.slogan': 'Перманентний макіяж, що виглядає природньо — як ви. Брови, губи, міжвійкова в Києві.',
     'hero.cta': 'Записатися на процедуру',
     'hero.brand': 'MAGEROVSKA PERMANENT',
+    'hero.imageAlt': 'Клієнтка після процедури перманентного макіяжу у студії Magerovska Permanent',
     
     // Site Title
     'site.title': 'Magerovska Permanent | Перманентний макіяж у Кракові та Києві',
@@ -652,6 +680,10 @@ const translations = {
     'faq.item.4.answer': 'Так, є ряд обмежень: вагітність і лактація, онкологія, цукровий діабет 1 типу, порушення згортання крові, келоїдні рубці, гострі запальні процеси. На консультації обов\'язково обговорюємо усі нюанси та протипоказання.',
     'faq.item.5.question': 'Чи потрібна корекція?',
     'faq.item.5.answer': 'Корекція рекомендується через 4-6 тижнів після першої процедури для досягнення ідеального результату. Це нормальна практика, оскільки шкіра у всіх загоюється по-різному. У більшості випадків однієї корекції вистачає на весь період носіння.',
+    'notfound.title': 'Сторінку не знайдено',
+    'notfound.description': 'Здається, цієї сторінки не існує. Скористайтеся кнопками нижче, щоб повернутися на сайт.',
+    'notfound.backHome': 'Повернутися на головну',
+    'notfound.contact': 'Зв’язатися з майстром',
   },
 };
 

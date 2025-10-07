@@ -14,17 +14,17 @@ export default function Hero() {
   };
 
   return (
-    <section 
-      className="relative h-screen flex items-center justify-center overflow-hidden" 
+    <section
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       data-testid="hero-section"
-      style={{
-        backgroundImage: `url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
-      <div className="absolute inset-0 bg-black/30"></div>
+      <img
+        src={heroImage}
+        alt={t('hero.imageAlt')}
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+      />
+      <div className="absolute inset-0 bg-black/30" aria-hidden="true"></div>
       
 
       {/* Hero Text positioned at the bottom center */}

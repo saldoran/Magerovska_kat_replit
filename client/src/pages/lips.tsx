@@ -9,7 +9,8 @@ import Footer from "@/components/footer";
 import SEO from "@/components/seo";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Sparkles, Heart, Palette } from "lucide-react";
+import { ChevronRight, Sparkles, Heart, Palette, ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Lips() {
   const { t, language } = useLanguage();
@@ -125,13 +126,53 @@ export default function Lips() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const serviceOffers = [
+    { name: t('pricing.lips.service.lipBlush'), price: '450' },
+    { name: t('pricing.lips.service.contour'), price: '350' },
+    { name: t('pricing.lips.service.correction'), price: '120' },
+  ];
+
+  const serviceStructuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': 'https://magerovska.com/services/lips#service',
+      'name': seo.title,
+      'serviceType': hero.title,
+      'description': seo.description,
+      'provider': {
+        '@type': 'LocalBusiness',
+        'name': 'Magerovska Permanent',
+        '@id': 'https://magerovska.com/#magerovska-permanent',
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': 'Kraków',
+      },
+      'offers': serviceOffers.map((offer) => ({
+        '@type': 'Offer',
+        'name': offer.name,
+        'price': offer.price,
+        'priceCurrency': 'PLN',
+        'availability': 'https://schema.org/InStock',
+        'url': 'https://magerovska.com/services/lips',
+      })),
+      'additionalProperty': [
+        { '@type': 'PropertyValue', 'name': t('services.label.duration'), 'value': t('services.lips.duration') },
+        { '@type': 'PropertyValue', 'name': t('services.label.healing'), 'value': t('services.lips.healing') },
+        { '@type': 'PropertyValue', 'name': t('services.label.lasting'), 'value': t('services.lips.lasting') },
+      ],
+    },
+  ];
+
   return (
     <>
-      <SEO 
+      <SEO
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl="https://magerovska.com/services/lips"
+        structuredData={serviceStructuredData}
       />
       <div className="min-h-screen">
         <Navigation />
@@ -139,6 +180,26 @@ export default function Lips() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-background to-accent/5">
           <div className="max-w-6xl mx-auto">
+            <div className="mb-8 text-sm text-muted-foreground">
+              <nav aria-label={t('breadcrumbs.label')} className="flex flex-wrap items-center gap-2">
+                <Link href="/" className="text-foreground hover:underline">
+                  {t('breadcrumbs.home')}
+                </Link>
+                <span className="text-muted-foreground">/</span>
+                <a href="/#services" className="text-foreground hover:underline">
+                  {t('breadcrumbs.services')}
+                </a>
+                <span className="text-muted-foreground">/</span>
+                <span className="font-medium text-foreground">{hero.title}</span>
+              </nav>
+              <Link
+                href="/"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                {t('breadcrumbs.back')}
+              </Link>
+            </div>
             <div className="text-center fade-in">
               <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-foreground" data-testid="text-page-title">
                 {hero.title}
