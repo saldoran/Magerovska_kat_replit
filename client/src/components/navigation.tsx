@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 
@@ -43,9 +44,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="text-white text-xl" style={{ fontFamily: 'LiuJianMaoCao, cursive' }} data-testid="logo-main">
+            <Link
+              href="/"
+              className="text-white text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              style={{ fontFamily: 'LiuJianMaoCao, cursive' }}
+              data-testid="logo-main"
+              aria-label="Go to homepage"
+            >
               Magerovska Permanent
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
