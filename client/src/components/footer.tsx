@@ -15,10 +15,10 @@ export default function Footer() {
 
   return (
     <footer data-testid="footer-section">
-      {/* Social Network Part - Email and Icons */}
+      {/* Unified Footer */}
       <div style={{ backgroundColor: '#2d2d2d' }} className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-end">
+          <div className="grid md:grid-cols-2 gap-12 items-end mb-12">
             {/* Left side: Email and Social Media */}
             <div>
               {/* Email Section */}
@@ -115,14 +115,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Slogan Part - Brand Name and Description */}
-      <div style={{ backgroundColor: '#222222' }} className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Brand Name with Cursive Font */}
-          <div className="mb-8">
+          {/* Divider */}
+          <div className="border-t border-gray-600 mb-12"></div>
+
+          {/* Brand Name and Description */}
+          <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl text-white mb-6" style={{ fontFamily: 'LiuJianMaoCao, cursive' }}>
               Magerovska permanent
             </h2>
@@ -132,7 +130,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-600 pt-8">
+          <div className="border-t border-gray-600 pt-8 text-center">
             <p className="text-gray-500 text-sm" data-testid="footer-copyright">
               {t('footer.copyright')}
             </p>
