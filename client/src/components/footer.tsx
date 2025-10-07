@@ -18,7 +18,7 @@ export default function Footer() {
       {/* Social Network Part - Email and Icons */}
       <div style={{ backgroundColor: '#2d2d2d' }} className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-end">
             {/* Left side: Email and Social Media */}
             <div>
               {/* Email Section */}
@@ -95,12 +95,12 @@ export default function Footer() {
 
             {/* Right side: Contact Information */}
             <div className="flex flex-col gap-6">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+              <div className="flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-gray-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm" data-testid="footer-address-value">{t('footer.addressValue')}</p>
               </div>
-              <div className="flex items-start gap-3">
-                <Phone className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+              <div className="flex items-center gap-3">
+                <Phone className="w-6 h-6 text-gray-400 flex-shrink-0" />
                 <a 
                   href={`tel:${t('footer.phoneValue')}`} 
                   className="text-gray-300 text-sm hover:text-white transition-colors"
@@ -109,8 +109,8 @@ export default function Footer() {
                   {t('footer.phoneValue')}
                 </a>
               </div>
-              <div className="flex items-start gap-3">
-                <Clock className="w-6 h-6 text-gray-400 mt-1 flex-shrink-0" />
+              <div className="flex items-center gap-3">
+                <Clock className="w-6 h-6 text-gray-400 flex-shrink-0" />
                 <p className="text-gray-300 text-sm" data-testid="footer-hours-value">{t('footer.hoursValue')}</p>
               </div>
             </div>

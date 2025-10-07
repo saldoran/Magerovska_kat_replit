@@ -35,13 +35,13 @@ const translations = {
   // Testimonials
   'testimonials.title': 'Отзывы',
   'testimonials.item.1.name': 'Анна К.',
-  'testimonials.item.1.date': '15 декабря 2025',
+  'testimonials.item.1.date': '15 декабря 2024',
   'testimonials.item.1.text': 'Катерина - настоящий профессионал! Брови получились именно такими, как я хотела - естественными и красивыми. Процедура прошла комфортно, заживление быстрое. Рекомендую всем подругам!',
   'testimonials.item.2.name': 'Мария С.',
-  'testimonials.item.2.date': '8 декабря 2025',
+  'testimonials.item.2.date': '8 декабря 2024',
   'testimonials.item.2.text': 'Сделала lip blush у Кати - результат превзошел все ожидания! Губы выглядят естественно, но при этом очень выразительно. Теперь экономлю время на макияж каждое утро. Спасибо за профессионализм!',
   'testimonials.item.3.name': 'Елена Т.',
-  'testimonials.item.3.date': '2 декабря 2025',
+  'testimonials.item.3.date': '2 декабря 2024',
   'testimonials.item.3.text': 'Долго искала мастера для перманентного макияжа и не пожалела, что выбрала Катю. Очень внимательная к деталям, аккуратная работа, отличный результат. Приду обязательно на коррекцию и за другими процедурами!',
   // Portfolio items
   'portfolio.item.1.title': 'Пудровые брови',
@@ -207,13 +207,13 @@ const translations = {
   // Testimonials
   'testimonials.title': 'Opinie',
   'testimonials.item.1.name': 'Anna K.',
-  'testimonials.item.1.date': '15 grudnia 2025',
+  'testimonials.item.1.date': '15 grudnia 2024',
   'testimonials.item.1.text': 'Katerina jest prawdziwym profesjonalistą! Brwi wyszły dokładnie takie, jak chciałam - naturalne i piękne. Zabieg przebiegł komfortowo, gojenie szybkie. Polecam wszystkim przyjaciółkom!',
   'testimonials.item.2.name': 'Maria S.',
-  'testimonials.item.2.date': '8 grudnia 2025',
+  'testimonials.item.2.date': '8 grudnia 2024',
   'testimonials.item.2.text': 'Zrobiłam lip blush u Katii - rezultat przerósł oczekiwania! Usta wyglądają naturalnie, ale jednocześnie bardzo wyraziste. Teraz oszczędzam czas na makijaż każdego ranka. Dziękuję za profesjonalizm!',
   'testimonials.item.3.name': 'Elena T.',
-  'testimonials.item.3.date': '2 grudnia 2025',
+  'testimonials.item.3.date': '2 grudnia 2024',
   'testimonials.item.3.text': 'Długo szukałam mistrza do makijażu permanentnego i nie żałuję wyboru Katii. Bardzo dokładna, staranna praca, świetny efekt. Na pewno wrócę na korektę i inne zabiegi!',
     
     // Services
@@ -356,13 +356,13 @@ const translations = {
   // Testimonials
   'testimonials.title': 'Testimonials',
   'testimonials.item.1.name': 'Anna K.',
-  'testimonials.item.1.date': '15 December 2025',
+  'testimonials.item.1.date': '15 December 2024',
   'testimonials.item.1.text': 'Katerina is a true professional! My brows turned out exactly as I wanted — natural and beautiful. The procedure was comfortable and healed quickly. I recommend her to all my friends!',
   'testimonials.item.2.name': 'Maria S.',
-  'testimonials.item.2.date': '8 December 2025',
+  'testimonials.item.2.date': '8 December 2024',
   'testimonials.item.2.text': 'I had a lip blush by Katya — the result exceeded expectations! My lips look natural yet very expressive. I now save time on makeup every morning. Thank you for the professionalism!',
   'testimonials.item.3.name': 'Elena T.',
-  'testimonials.item.3.date': '2 December 2025',
+  'testimonials.item.3.date': '2 December 2024',
   'testimonials.item.3.text': 'I searched a long time for a permanent makeup artist and I don\'t regret choosing Katya. Very attentive to details, neat work, great result. I will definitely come back for a touch-up and other procedures!',
   // Portfolio items
   'portfolio.item.1.title': 'Powder brows',
@@ -518,13 +518,13 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Відгуки',
     'testimonials.item.1.name': 'Анна К.',
-    'testimonials.item.1.date': '15 грудня 2025',
+    'testimonials.item.1.date': '15 грудня 2024',
     'testimonials.item.1.text': 'Катерина - справжній професіонал! Брови вийшли саме такими, як я хотіла - природними і красивими. Процедура пройшла комфортно, загоювання швидке. Рекомендую всім подругам!',
     'testimonials.item.2.name': 'Марія С.',
-    'testimonials.item.2.date': '8 грудня 2025',
+    'testimonials.item.2.date': '8 грудня 2024',
     'testimonials.item.2.text': 'Зробила lip blush у Каті - результат перевершив усі сподівання! Губи виглядають природньо, але при цьому дуже виразно. Тепер економлю час на макіяж кожного ранку. Дякую за професіоналізм!',
     'testimonials.item.3.name': 'Олена Т.',
-    'testimonials.item.3.date': '2 грудня 2025',
+    'testimonials.item.3.date': '2 грудня 2024',
     'testimonials.item.3.text': 'Довго шукала майстра для перманентного макіяжу і не пожалкувала, що обрала Катю. Дуже уважна до деталей, акуратна робота, відмінний результат. Прийду обов\'язково на корекцію та за іншими процедурами!',
     // Portfolio items
     'portfolio.item.1.title': 'Пудрові брови',
