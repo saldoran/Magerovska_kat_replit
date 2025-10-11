@@ -50,6 +50,12 @@ export default function Navigation() {
               style={{ fontFamily: 'LiuJianMaoCao, cursive' }}
               data-testid="logo-main"
               aria-label="Go to homepage"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (typeof window !== 'undefined') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
             >
               Magerovska Permanent
             </Link>
