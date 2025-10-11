@@ -6,6 +6,22 @@ import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
 
+function resolveSpaIndexFile() {
+  const candidatePaths = [
+    path.resolve(import.meta.dirname, "public", "index.html"),
+    path.resolve(process.cwd(), "dist", "public", "index.html"),
+    path.resolve(process.cwd(), "dist", "client", "index.html"),
+  ];
+
+  for (const candidate of candidatePaths) {
+    if (fs.existsSync(candidate)) {
+      return candidate;
+    }
+  }
+
+  return undefined;
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint - submits to Google Form
   app.post("/api/contact", async (req, res) => {
@@ -75,15 +91,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  const distIndex = path.resolve(import.meta.dirname, "public", "index.html");
-
   app.get(/^\/services(\/.*)?$/, (req, res, next) => {
     if (app.get("env") === "development") {
       return next();
     }
 
-    if (fs.existsSync(distIndex)) {
-      res.sendFile(distIndex);
+    const indexFile = resolveSpaIndexFile();
+
+    if (indexFile) {
+      res.sendFile(indexFile);
       return;
     }
 

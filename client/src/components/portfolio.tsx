@@ -68,6 +68,7 @@ export default function Portfolio() {
                 src={item.image}
                 alt={t(item.altKey as string)}
                 className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
                 data-testid={`img-portfolio-${item.id}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
