@@ -9,6 +9,12 @@ import Eyebrows from "@/pages/eyebrows";
 import Lips from "@/pages/lips";
 import Eyeliner from "@/pages/eyeliner";
 import NotFound from "@/pages/not-found";
+import { withLocalizedLanguage } from "@/pages/localized-page";
+
+const LocalizedHome = withLocalizedLanguage(Home);
+const LocalizedEyebrows = withLocalizedLanguage(Eyebrows);
+const LocalizedLips = withLocalizedLanguage(Lips);
+const LocalizedEyeliner = withLocalizedLanguage(Eyeliner);
 
 function Router() {
   return (
@@ -19,6 +25,10 @@ function Router() {
       <Route path="/services/eyebrows" component={Eyebrows} />
       <Route path="/services/lips" component={Lips} />
       <Route path="/services/eyeliner" component={Eyeliner} />
+      <Route path="/:lang/services/eyebrows" component={LocalizedEyebrows} />
+      <Route path="/:lang/services/lips" component={LocalizedLips} />
+      <Route path="/:lang/services/eyeliner" component={LocalizedEyeliner} />
+      <Route path="/:lang" component={LocalizedHome} />
       <Route component={NotFound} />
     </Switch>
   );

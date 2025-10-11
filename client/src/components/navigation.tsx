@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { getLocalizedPath, stripLocaleFromPath } from "@/utils/languagePaths";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const [location, setLocation] = useLocation();
 
   const languages = [
     { code: 'ru' as Language, name: 'RU', flag: '🇷🇺' },
@@ -37,15 +41,60 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const homePath = getLocalizedPath(language, '/');
+
+  const handleLogoClick = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const targetPath = homePath;
+    const currentPath = location || '/';
+
+    if (currentPath === targetPath) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      setLocation(targetPath);
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    setIsMobileMenuOpen(false);
+    setIsLanguageDropdownOpen(false);
+  };
+
+  const handleLanguageChange = (lang: Language) => {
+    const currentPath = location || '/';
+    const normalizedPath = stripLocaleFromPath(currentPath);
+    const targetPath = getLocalizedPath(lang, normalizedPath);
+
+    setLanguage(lang);
+    setIsLanguageDropdownOpen(false);
+
+    if (targetPath !== currentPath) {
+      setLocation(targetPath);
+    }
+
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-20 backdrop-blur-md border-b border-white border-opacity-10" data-testid="navbar-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="text-white text-xl" style={{ fontFamily: 'LiuJianMaoCao, cursive' }} data-testid="logo-main">
+            <Link
+              href={homePath}
+              className="text-white text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              style={{ fontFamily: 'LiuJianMaoCao, cursive' }}
+              data-testid="logo-main"
+              aria-label="Go to homepage"
+              onClick={handleLogoClick}
+            >
               Magerovska Permanent
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -98,10 +147,7 @@ export default function Navigation() {
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
-                        onClick={() => {
-                          setLanguage(lang.code);
-                          setIsLanguageDropdownOpen(false);
-                        }}
+                        onClick={() => handleLanguageChange(lang.code)}
                         className={`w-full px-4 py-2 text-left border-t-2 border-transparent hover:border-gray-900 hover:bg-gray-50 transition-colors ${
                           language === lang.code ? 'bg-gray-100 font-medium' : ''
                         }`}

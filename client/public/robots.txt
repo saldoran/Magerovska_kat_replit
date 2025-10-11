@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://magerovska-permanent.com/sitemap.xml
+Sitemap: https://magerovska.com/sitemap.xml

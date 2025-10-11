@@ -1,5 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import path from "path";
+import fs from "fs";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
@@ -71,6 +73,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: "Internal server error"
       });
     }
+  });
+
+  const distIndex = path.resolve(import.meta.dirname, "public", "index.html");
+
+  app.get(/^\/services(\/.*)?$/, (req, res, next) => {
+    if (app.get("env") === "development") {
+      return next();
+    }
+
+    if (fs.existsSync(distIndex)) {
+      res.sendFile(distIndex);
+      return;
+    }
+
+    next();
+  });
+
+  app.get(/^\/(ru|pl|en|ua|uk)(\/.*)?$/, (req, res, next) => {
+    if (app.get("env") === "development") {
+      return next();
+    }
+
+    if (fs.existsSync(distIndex)) {
+      res.sendFile(distIndex);
+      return;
+    }
+
+    next();
   });
 
   const httpServer = createServer(app);
