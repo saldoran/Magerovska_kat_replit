@@ -11,37 +11,4 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/?lang=uk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/"/>
   </url>
-  <url>
-    <loc>https://magerovska.com/services/eyebrows</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/eyebrows?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/eyebrows?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/eyebrows?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/eyebrows?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/eyebrows"/>
-  </url>
-  <url>
-    <loc>https://magerovska.com/services/lips</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/lips?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/lips?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/lips?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/lips?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/lips"/>
-  </url>
-  <url>
-    <loc>https://magerovska.com/services/eyeliner</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://magerovska.com/services/eyeliner?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://magerovska.com/services/eyeliner?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://magerovska.com/services/eyeliner?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://magerovska.com/services/eyeliner?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://magerovska.com/services/eyeliner"/>
-  </url>
 </urlset>
