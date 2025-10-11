@@ -32,14 +32,18 @@ export default function NotFound() {
                 </div>
                 <p className="text-base text-gray-600 max-w-lg">{t('notfound.description')}</p>
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-center">
-                  <Link href={localizedHomePath} className="flex-1 sm:flex-none">
+                  <Link
+                    href={localizedHomePath}
+                    className="flex-1 sm:flex-none"
+                    aria-label={t('notfound.homeLabel')}
+                  >
                     <Button className="w-full">
                       <ArrowLeft className="h-4 w-4" />
                       {t('notfound.backHome')}
                     </Button>
                   </Link>
                   <Button asChild variant="outline" className="flex-1 sm:flex-none">
-                    <a href={contactHref}>
+                    <a href={contactHref} aria-label={t('notfound.contactLabel')}>
                       <MessageCircle className="h-4 w-4" />
                       {t('notfound.contact')}
                     </a>

@@ -91,7 +91,7 @@ function updateAlternateLinks(_currentLang: Language, baseUrl: string, pathname:
   const normalizedPath = stripLocaleFromPath(pathname);
 
   // Remove legacy hreflang entries that may remain from previous deployments
-  document.querySelectorAll('link[rel="alternate"][hreflang="uk"]').forEach((node) => node.remove());
+  document.querySelectorAll('link[rel="alternate"][hreflang="ua"]').forEach((node) => node.remove());
 
   languages.forEach((lang) => {
     const hreflang = getHrefLang(lang);
@@ -155,8 +155,11 @@ function createLocalBusinessData(language: Language, description: string, baseUr
     const servicePath = `/services/${service}`;
     const serviceUrl = getLocalizedUrl(language, servicePath, baseUrl);
 
+    const offerId = `${businessUrl}#offer-${service}`;
+
     return {
       '@type': 'Offer',
+      '@id': offerId,
       'priceCurrency': 'PLN',
       'price': getServicePrice(service),
       'availability': 'https://schema.org/InStock',

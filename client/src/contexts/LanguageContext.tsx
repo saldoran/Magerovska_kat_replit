@@ -177,7 +177,9 @@ const translations = {
   'notfound.title': 'Страница не найдена',
   'notfound.description': 'Похоже, вы попали на несуществующую страницу. Воспользуйтесь кнопками ниже, чтобы вернуться на сайт.',
   'notfound.backHome': 'На главную',
+  'notfound.homeLabel': 'Вернуться на главную страницу',
   'notfound.contact': 'Связаться с мастером',
+  'notfound.contactLabel': 'Перейти к разделу контактов',
   },
   pl: {
     // Navigation
@@ -311,7 +313,9 @@ const translations = {
   'notfound.title': 'Strona nie została znaleziona',
   'notfound.description': 'Wygląda na to, że ta strona nie istnieje. Skorzystaj z przycisków poniżej, aby wrócić na stronę główną.',
   'notfound.backHome': 'Wróć na stronę główną',
+  'notfound.homeLabel': 'Powrót na stronę główną',
   'notfound.contact': 'Skontaktuj się z nami',
+  'notfound.contactLabel': 'Przejdź do sekcji kontaktów',
   // Process
   'process.title': 'Proces',
   'process.step1.title': 'Konsultacja',
@@ -480,7 +484,9 @@ const translations = {
   'notfound.title': 'Page not found',
   'notfound.description': 'It looks like this page does not exist. Use the options below to get back on track.',
   'notfound.backHome': 'Back to homepage',
+  'notfound.homeLabel': 'Return to the homepage',
   'notfound.contact': 'Contact the artist',
+  'notfound.contactLabel': 'Jump to the contact section',
   // Process
   'process.title': 'Process',
   'process.step1.title': 'Consultation',
@@ -683,7 +689,9 @@ const translations = {
     'notfound.title': 'Сторінку не знайдено',
     'notfound.description': 'Здається, цієї сторінки не існує. Скористайтеся кнопками нижче, щоб повернутися на сайт.',
     'notfound.backHome': 'Повернутися на головну',
+    'notfound.homeLabel': 'Повернутися на головну сторінку',
     'notfound.contact': 'Зв’язатися з майстром',
+    'notfound.contactLabel': 'Перейти до розділу контактів',
   },
 };
 

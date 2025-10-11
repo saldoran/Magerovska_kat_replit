@@ -22,7 +22,7 @@ export function getLanguageSlug(language: Language): string {
 }
 
 export function getHrefLang(language: Language): string {
-  return language === 'uk' ? 'ua' : language;
+  return language === 'uk' ? 'uk' : language;
 }
 
 export function getLocalizedPath(language: Language, path: string): string {
